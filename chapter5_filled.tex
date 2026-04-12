@@ -1,0 +1,161 @@
+\chapter{Results and Discussion}
+
+\section{Effective Diameter Prediction}
+
+\begin{table}[H]
+\centering
+\caption{Model comparison for effective diameter prediction. Best values in \textbf{bold}.}
+\label{tab:diameter-results}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccp{5cm}}
+\toprule
+\textbf{Model} & \textbf{CV $R^2$} & \textbf{Test $R^2$} & \textbf{MAE (mm)} & \textbf{RMSE (mm)} & \textbf{MAPE (\%)} & \textbf{Best Hyperparameters} \\
+\midrule
+\textbf{Random Forest} $\star$ & 0.5293 & \textbf{0.6952} & \textbf{6.02} & \textbf{7.70} & \textbf{26.7} & n\_est=200, max\_depth=5, min\_samples\_leaf=2 \\
+Gradient Boosting    & 0.5047 & 0.6789 & 6.23 & 7.90 & 28.7 & lr=0.01, max\_depth=5, n\_est=200 \\
+Ridge Regression     & 0.3542 & 0.5313 & 7.90 & 9.55 & 39.3 & $\alpha$=10.0 \\
+KNN                  & 0.4804 & 0.5255 & 7.74 & 9.60 & 34.3 & $k$=7, metric=manhattan, weights=uniform \\
+SVR                  & 0.4262 & 0.5138 & 6.91 & 9.72 & 27.8 & $C$=100, $\gamma$=auto, $\varepsilon$=0.5 \\
+MLP Neural Network   & 0.4542 & $-$0.0102 & 11.59 & 14.01 & 54.2 & hidden=(50,25), act=relu \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{model_comparison_diameter.png}
+\caption{Model comparison for effective diameter prediction.}
+\label{fig:model-comparison-diameter}
+\end{figure}
+
+\textbf{Random Forest} achieved the best performance with $R^2 = 0.695$ and MAE $= 6.02$\,mm, meaning the model explains $\sim$70\% of the variance in ablation diameter with an average prediction error of only 6\,mm.
+
+
+\section{Length Prediction}
+
+\begin{table}[H]
+\centering
+\caption{Model comparison for length prediction. Best values in \textbf{bold}.}
+\label{tab:length-results}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccp{5.5cm}}
+\toprule
+\textbf{Model} & \textbf{CV $R^2$} & \textbf{Test $R^2$} & \textbf{MAE (mm)} & \textbf{RMSE (mm)} & \textbf{MAPE (\%)} & \textbf{Best Hyperparameters} \\
+\midrule
+\textbf{Gradient Boosting} $\star$ & 0.6690 & \textbf{0.5118} & 10.93 & \textbf{13.76} & 36.8 & lr=0.01, max\_depth=7, n\_est=200 \\
+Random Forest        & 0.6420 & 0.5032 & 10.67 & 13.88 & 35.5 & max\_depth=15, n\_est=200 \\
+MLP Neural Network   & 0.5119 & 0.4875 & \textbf{9.97} & 14.10 & \textbf{29.5} & hidden=(100,), act=tanh \\
+SVR                  & 0.6180 & 0.3445 & 10.74 & 15.95 & 36.8 & $C$=100, $\gamma$=auto, $\varepsilon$=0.01 \\
+KNN                  & 0.6008 & 0.2954 & 11.33 & 16.53 & 36.1 & $k$=3, metric=manhattan, weights=distance \\
+Ridge Regression     & 0.3994 & 0.2580 & 12.50 & 16.97 & 44.4 & $\alpha$=0.1 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{model_comparison_length.png}
+\caption{Model comparison for length prediction.}
+\label{fig:model-comparison-length}
+\end{figure}
+
+Length prediction is more challenging (lower $R^2$ values), likely because the longitudinal extent of the ablation zone is more sensitive to antenna-specific parameters not captured in our feature set (e.g., antenna length, slot positions, dielectric properties).
+
+
+\section{Best Model Analysis}
+
+\subsection{Predicted vs.\ Actual}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{predicted_vs_actual.png}
+\caption{Predicted vs.\ actual values for the best models.}
+\label{fig:pred-vs-actual}
+\end{figure}
+
+The predicted vs.\ actual plots show that:
+\begin{itemize}
+    \item \textbf{Diameter}: Points cluster tightly around the 45$^\circ$ line for the 15--45\,mm range, with some scatter at extremes.
+    \item \textbf{Length}: More variance, particularly for longer ablation zones ($>50$\,mm).
+\end{itemize}
+
+
+\subsection{Residual Analysis}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{residual_analysis.png}
+\caption{Residual analysis for the best models (residuals vs.\ predicted values and residual distributions).}
+\label{fig:residual-analysis}
+\end{figure}
+
+The residual plots reveal:
+\begin{itemize}
+    \item \textbf{No systematic bias}: Residuals are approximately centred around zero.
+    \item \textbf{Residual distribution}: Roughly normal, supporting the validity of our regression analysis.
+    \item \textbf{Slight heteroscedasticity}: Variance increases for larger predicted values (expected in physical systems).
+\end{itemize}
+
+
+\subsection{Feature Importance}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{feature_importance.png}
+\caption{Feature importance from the Random Forest model for diameter prediction.}
+\label{fig:feature-importance}
+\end{figure}
+
+Top features for diameter prediction (Random Forest):
+
+\begin{table}[H]
+\centering
+\caption{Feature importance ranking for effective diameter prediction.}
+\label{tab:feature-importance}
+\begin{tabular}{clc}
+\toprule
+\textbf{Rank} & \textbf{Feature} & \textbf{Importance} \\
+\midrule
+1 & \texttt{log\_energy}          & 0.2450 (24.5\%) \\
+2 & \texttt{energy\_joules}       & 0.2190 (21.9\%) \\
+3 & \texttt{power\_time\_product} & 0.2028 (20.3\%) \\
+4 & \texttt{antenna\_encoded}     & 0.1214 (12.1\%) \\
+5 & \texttt{is\_simulated}        & 0.0613 (6.1\%)  \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Key insight}: Energy-related features (\texttt{log\_energy}, \texttt{energy\_joules}, \texttt{power\_time\_product}) collectively account for \textbf{66.7\%} of the prediction power, confirming that the total energy delivered is the dominant factor in determining ablation zone size. The antenna type contributes 12.1\%, highlighting that antenna design plays a meaningful but secondary role.
+
+
+\section{Overfitting Analysis}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{cv_vs_test_comparison.png}
+\caption{Cross-validation $R^2$ vs.\ test set $R^2$ for each model.}
+\label{fig:cv-vs-test}
+\end{figure}
+
+Comparing cross-validation $R^2$ and test $R^2$ reveals:
+\begin{itemize}
+    \item \textbf{Random Forest (Diameter)}: CV $R^2 = 0.529$ vs.\ Test $R^2 = 0.695$ --- test performance is higher, suggesting the model generalizes well and may benefit from more training data.
+    \item \textbf{KNN (Length)}: CV $R^2 = 0.601$ vs.\ Test $R^2 = 0.295$ --- significant drop, indicating overfitting to the training data.
+    \item \textbf{MLP (Diameter)}: CV $R^2 = 0.454$ vs.\ Test $R^2 = -0.010$ --- severe overfitting; the neural network failed to generalize with this dataset size.
+\end{itemize}
+
+
+\section{Discussion}
+
+\noindent\textbf{Why Tree-Based Models Perform Best:}
+\begin{enumerate}
+    \item \textbf{Tabular data}: Random Forest and Gradient Boosting are consistently the top performers on structured tabular data, as confirmed by large-scale benchmarking studies.
+    \item \textbf{Small dataset}: With only $\sim$230 training samples, tree ensembles' built-in regularization (bagging for RF, shallow trees for GBR) prevents overfitting.
+    \item \textbf{Mixed feature types}: Trees naturally handle the combination of continuous features (power, time) and categorical features (antenna type).
+    \item \textbf{Non-linear relationships}: The relationship between treatment parameters and ablation zone size is inherently non-linear (saturation effects, thermal diffusion).
+\end{enumerate}
+
+\noindent\textbf{Why MLP Underperformed:}\\
+The neural network suffered from overfitting despite regularization (early stopping, weight decay). With only 233 training samples, the network could not learn robust representations, leading to a negative $R^2$ on the test set for diameter prediction.

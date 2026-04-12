@@ -1,0 +1,135 @@
+\chapter{Dataset Description and Exploratory Data Analysis}
+
+\section{Data Sources}
+
+Data was curated from two primary categories:
+
+\begin{table}[H]
+\centering
+\caption{Summary of data sources.}
+\label{tab:data-sources}
+\begin{tabular}{llll}
+\toprule
+\textbf{Dataset} & \textbf{Samples} & \textbf{Source Type} & \textbf{Papers} \\
+\midrule
+Experimental Data & 222 & Ex vivo / In vivo measurements & $\sim$25 papers (2004--2025) \\
+Simulated Data    & 104 & FEM / Computational models     & $\sim$15 papers (2009--2025) \\
+\midrule
+\textbf{Combined Total} & \textbf{326} & Mixed & \textbf{30+ papers} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Raw Data Structure}
+
+Each data entry contains the fields shown in Table~\ref{tab:raw-data}.
+
+\begin{table}[H]
+\centering
+\caption{Raw data columns and availability.}
+\label{tab:raw-data}
+\begin{tabular}{p{4.5cm}p{7cm}l}
+\toprule
+\textbf{Column} & \textbf{Description} & \textbf{Availability} \\
+\midrule
+\texttt{PAPERS \& REFERENCES}      & Source paper citation and antenna details          & 100\%  \\
+\texttt{INPUT POWER}               & Applied microwave power (e.g., ``50W'', ``100 W'')  & 99.7\% \\
+\texttt{TIME}                      & Treatment duration (e.g., ``5 minutes'')            & 99.4\% \\
+\texttt{OUTPUT TEMPERATURE}        & Maximum recorded temperature                       & 29.1\% \\
+\texttt{ABLATION ZONE PARAMETERS}  & Zone dimensions in free-text format                & 100\%  \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The raw data required significant parsing and cleaning due to inconsistent formatting across different papers (e.g., ``Width:~18.4mm'', ``diameter = 19 mm'', ``Length:~30mm\textbackslash nDiameter:~19mm'').
+
+
+\section{Exploratory Data Analysis}
+
+\subsection{Feature Distributions}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{feature_distributions.png}
+\caption{Distribution of key features in the dataset.}
+\label{fig:feature-distributions}
+\end{figure}
+
+Key observations:
+\begin{itemize}
+    \item \textbf{Power}: Right-skewed; majority of studies use 20--100\,W, with a mean of $\sim$48\,W (after filtering extreme values).
+    \item \textbf{Time}: Most treatments last 1--15 minutes, with 5 and 10 minutes being the most common.
+    \item \textbf{Temperature}: Available for only 29.1\% of samples; ranges from 25\,$^\circ$C to 307\,$^\circ$C.
+    \item \textbf{Effective Diameter}: Approximately normally distributed, mean $\sim$28\,mm.
+    \item \textbf{Sphericity Index}: Mean $\sim$0.68, indicating most ablation zones are ellipsoidal.
+\end{itemize}
+
+
+\subsection{Correlation Analysis}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{correlation_heatmap.png}
+\caption{Correlation heatmap of numerical features.}
+\label{fig:correlation}
+\end{figure}
+
+Key correlations with \textbf{effective diameter} (primary target):
+\begin{itemize}
+    \item \texttt{energy\_joules} (power $\times$ time $\times$ 60): $r = +0.591$ --- strongest input predictor.
+    \item \texttt{power\_time\_product}: $r = +0.591$.
+    \item \texttt{temperature\_celsius}: $r = +0.531$.
+    \item \texttt{power\_watts}: $r = +0.430$.
+    \item \texttt{time\_minutes}: $r = +0.343$.
+\end{itemize}
+
+The energy delivered (power $\times$ time) is a significantly better predictor than either power or time alone, justifying its inclusion as an engineered feature (Figure~\ref{fig:ablation-vs-inputs}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{ablation_vs_inputs.png}
+\caption{Ablation zone dimensions vs.\ input parameters.}
+\label{fig:ablation-vs-inputs}
+\end{figure}
+
+
+\subsection{Missing Value Analysis}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{missing_values.png}
+\caption{Missing value percentages by feature.}
+\label{fig:missing-values}
+\end{figure}
+
+\begin{itemize}
+    \item \texttt{aspect\_ratio} (99.1\% missing) and \texttt{volume\_mm3} (96.9\% missing): Too sparse for direct use as targets.
+    \item \texttt{temperature\_celsius} (70.9\% missing): Not reliable as an input feature; treated as optional.
+    \item \texttt{effective\_diameter\_mm} (8.3\% missing): Primary target, well-populated.
+    \item \texttt{length\_mm} (38.0\% missing): Secondary target, moderately populated.
+\end{itemize}
+
+
+\subsection{Antenna Type Analysis}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{antenna_distribution.png}
+\caption{Distribution of antenna types and their ablation diameters.}
+\label{fig:antenna-distribution}
+\end{figure}
+
+Fifteen antenna categories were identified. The ``Other'' category (143 samples) includes papers where the antenna type was embedded in the paper title rather than explicitly labelled. The box plot reveals that different antenna types produce significantly different ablation diameters, confirming the importance of antenna type as an input feature.
+
+
+\subsection{Experimental vs.\ Simulated Comparison}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{data_source_comparison.png}
+\caption{Comparison of experimental and simulated data distributions.}
+\label{fig:data-source-comparison}
+\end{figure}
+
+Both datasets show similar distributions for power and ablation dimensions, suggesting they can be combined for training. A binary \texttt{is\_simulated} flag was included as a feature to allow models to account for systematic differences.

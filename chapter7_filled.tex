@@ -1,0 +1,39 @@
+\chapter{Conclusion and Future Work}
+
+\section{Conclusion}
+
+This project successfully developed an AI/ML-based predictive model for microwave ablation zone estimation. Key outcomes include:
+
+\begin{enumerate}
+    \item \textbf{A curated dataset} of 326 samples from 30+ published studies was created, spanning experimental and simulation data across 15 antenna types.
+    \item \textbf{Comprehensive feature engineering} extracted meaningful numerical features from unstructured text, including energy-based and log-transformed features.
+    \item \textbf{Six ML models} were trained and compared using 10-fold cross-validation and GridSearchCV.
+    \item \textbf{Random Forest} emerged as the best model for diameter prediction ($R^2 = 0.695$, MAE $= 6.02$\,mm), while \textbf{Gradient Boosting} performed best for length prediction ($R^2 = 0.512$, MAE $= 10.93$\,mm).
+    \item \textbf{Energy delivered} (power $\times$ time) was identified as the single most important predictor of ablation zone size, accounting for $\sim$67\% of feature importance.
+    \item An \textbf{interactive prediction system} was built for real-time ablation zone estimation.
+\end{enumerate}
+
+The model achieves clinically meaningful accuracy --- a MAE of 6\,mm for diameter prediction is within the range of measurement uncertainty in published studies --- and runs in milliseconds compared to hours for physics-based simulations.
+
+
+\section{Limitations}
+
+\begin{enumerate}
+    \item \textbf{Dataset size}: 326 samples is small for ML; more data would improve generalization.
+    \item \textbf{Missing features}: Antenna-specific parameters (length, slot dimensions, frequency) were not consistently available and could improve accuracy.
+    \item \textbf{Tissue variability}: The dataset combines different tissue types (liver, lung, kidney, egg white, bovine) without tissue-type encoding.
+    \item \textbf{Temperature data}: Only 29.1\% of entries had temperature data, limiting its use as a feature.
+    \item \textbf{Heterogeneous sources}: Data aggregated from multiple papers may have measurement biases.
+\end{enumerate}
+
+
+\section{Future Work}
+
+\begin{enumerate}
+    \item \textbf{Expand the dataset} with more recent publications and additional ablation modalities.
+    \item \textbf{Include tissue-specific features} (perfusion rate, dielectric properties, tissue type).
+    \item \textbf{Deep learning approaches} with larger datasets (e.g., physics-informed neural networks).
+    \item \textbf{3D ablation zone shape prediction} using image-based ML models.
+    \item \textbf{Web-based clinical tool} with a user-friendly interface for treatment planning.
+    \item \textbf{Multi-output models} that simultaneously predict diameter, length, and volume.
+\end{enumerate}

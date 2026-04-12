@@ -1,0 +1,31 @@
+\chapter{Introduction}
+
+Cancer remains one of the leading causes of morbidity globally. Minimally invasive thermal ablation techniques --- particularly \textbf{Microwave Ablation (MWA)} --- have emerged as promising alternatives to traditional surgery for the treatment of solid tumors in organs such as the liver, lung, kidney, and adrenal glands. MWA works by delivering electromagnetic energy through interstitial antennas to heat and destroy cancerous tissue, creating a region of necrosis known as the \textbf{ablation zone}.
+
+The shape and dimensions of this ablation zone are critically important: the zone must be large enough to completely cover the tumor while minimizing damage to surrounding healthy tissue. Currently, clinicians rely on a combination of clinical experience, manufacturer-provided ablation charts, and computational simulations (such as Finite Element Method models) to estimate the ablation zone prior to treatment. These approaches are either time-consuming, require specialized software, or fail to generalize across different antenna designs and operating conditions.
+
+
+\section{Problem Statement}
+
+\begin{quote}
+\textit{Develop an AI/ML-based predictive model that accurately estimates the ablation zone produced during tumor treatment using combined hyperthermia and irreversible electroporation parameters, enabling faster and more accurate treatment planning while minimizing damage to surrounding healthy tissues.}
+\end{quote}
+
+The central challenge is predicting the \textbf{dimensions of the ablation zone} (diameter, length, volume) from the treatment parameters (input power, duration, antenna type) without requiring computationally expensive physics-based simulations.
+
+
+\section{Objectives}
+
+\begin{enumerate}
+    \item Collect and curate ablation zone data from published experimental and simulation studies.
+    \item Perform comprehensive exploratory data analysis to understand feature relationships.
+    \item Engineer meaningful features from raw treatment parameters.
+    \item Train and evaluate multiple ML regression models for ablation zone prediction.
+    \item Compare model performance and identify the best-performing approach.
+    \item Build an interactive prediction system for clinical decision support.
+\end{enumerate}
+
+
+\section{Scope of Work}
+
+This project focuses on \textbf{microwave ablation} data collected from 30+ published research papers spanning 2004--2025. The dataset includes both \textbf{experimental} (ex vivo/in vivo) and \textbf{simulation} (FEM/computational) data across 15+ antenna types and a variety of power levels and treatment durations.

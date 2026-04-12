@@ -1,0 +1,631 @@
+PAPERS & REFERENCES,INPUT POWER,TIME,OUTPUT TEMPERATURE,ABLATION ZONE PARAMETERS
+"Dual-slot antennas for microwave tissue heating: Parametric design analysis and experimental validation- 2011
+
+Antenna type: Dual slot antenna 
+Antenna dimensions: G1=1mm, G2=4mm±1mm, L=8mm±1mm                                                                    ",50W,2 minutes,NA,"Diameter: 19.1±0.9mm
+Length: 29.6±1.7mm
+Aspect ratio: 0.711 ±0.01"
+"Dual-slot antennas for microwave tissue heating: Parametric design analysis and experimental validation- 2011
+
+Antenna type: Dual slot antenna 
+Antenna dimensions: G1=1mm, G2=4mm±1mm, L=8mm±1mm                                                                    ",50W,5 minutes,NA,"Diameter: 25.7±1.6mm
+Length:37.6±2.4mm
+Aspect ratio: 0.683±0.05"
+"Dual-slot antennas for microwave tissue heating: Parametric design analysis and experimental validation- 2011
+
+Antenna type: Dual slot antenna 
+Antenna dimensions: G1=1mm, G2=4mm±1mm, L=8mm±1mm                                                                    ",50W,10 minutes,NA,"Diameter: 34.7±2.4mm
+Length:49.2±2.1mm
+Aspect ratio: 0.706±0.03"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies:
+Design, Performances, and Experimental Assessment- 2011",20W,3 minutes,NA,"Length: 30mm
+Diameter: 19mm"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies:
+Design, Performances, and Experimental Assessment- 2011",20W,5 minutes,NA,"Length: 34mm
+Diameter: 22mm"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies:
+Design, Performances, and Experimental Assessment- 2011",20W,10 minutes,NA,"Length: 35mm
+Diameter: 28mm"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies:
+Design, Performances, and Experimental Assessment- 2011",20W,15 minutes,NA,"Length: 38mm
+Diameter: 31mm"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies:
+Design, Performances, and Experimental Assessment- 2011",40W,3 minutes,NA,"Length: 36mm
+Diameter: 24mm"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies:
+Design, Performances, and Experimental Assessment- 2011",40W,5 minutes,NA,"Length: 42mm
+Diameter: 30mm"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies:
+Design, Performances, and Experimental Assessment- 2011",40W,10 minutes,NA,"Length: 53mm
+Diameter: 38mm"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies:
+Design, Performances, and Experimental Assessment- 2011",40W,15 minutes,NA,"Length: 57mm
+Diameter: 40mm"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies:
+Design, Performances, and Experimental Assessment- 2011",60W,3 minutes,NA,"Length: 45mm
+Diameter: 26mm"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies:
+Design, Performances, and Experimental Assessment- 2011",60W,5 minutes,NA,"Length: 47mm
+Diameter: 36mm"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies:
+Design, Performances, and Experimental Assessment- 2011",60W,10 minutes,NA,"Length: 65mm
+Diameter: 45mm"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies:
+Design, Performances, and Experimental Assessment- 2011",60W,15 minutes,NA,"Length: 70mm
+Diameter: 52mm"
+Intraoperative Triple Antenna Hepatic Microwave Ablation - 2012,45W,10 minutes,NA,Diameter: 55 mm
+"Microwave ablation versus radiofrequency ablation in the kidney: high-power triaxial antennas create larger ablation zones than similarly sized internally cooled electrodes - 2012
+",90W,12 minutes,NA,"Minimum diameter: 3.2mm
+Maximum diameter: 3.9mm"
+A Dual-Slot Microwave Antenna for More Spherical Ablation Zones: Ex Vivo and in Vivo Validation- 2013,50W,2 minutes,NA,"Diameter: 19.5mm±2.7mm
+Length: 26.4±3mm"
+A Dual-Slot Microwave Antenna for More Spherical Ablation Zones: Ex Vivo and in Vivo Validation- 2013,50W,5 minutes,NA,"Diameter: 21.2mm±1.4mm
+Length: 26.1±3.4mm"
+A Dual-Slot Microwave Antenna for More Spherical Ablation Zones: Ex Vivo and in Vivo Validation- 2013,50W,10 minutes,NA,"Diameter: 30.1mm±2.9mm
+Length: 51.4±6.4mm"
+A Dual-Slot Microwave Antenna for More Spherical Ablation Zones: Ex Vivo and in Vivo Validation- 2013,100W,2 minutes,NA,"Diameter: 21.4mm±1.5mm
+Length: 41.6±2mm"
+A Dual-Slot Microwave Antenna for More Spherical Ablation Zones: Ex Vivo and in Vivo Validation- 2013,100W,5 minutes,NA,"Diameter: 30.7mm±3.5mm
+Length: 48.3±5mm"
+A Dual-Slot Microwave Antenna for More Spherical Ablation Zones: Ex Vivo and in Vivo Validation- 2013,100W,10 minutes,NA,"Diameter: 31.2mm±4.8mm
+Length: 60.4±1.35mm"
+A Dual-Slot Microwave Antenna for More Spherical Ablation Zones: Ex Vivo and in Vivo Validation- 2013,100W,5 minutes,NA,"Diameter: 28.5±4.5mm
+Length: 44.7±7.1mm"
+Microwave Ablation at 10.0 GHz Achieves Comparable Ablation Zones to 1.9 GHz in Ex Vivo Bovine Liver-2014,42W,5 minutes,105°C,"Width:35mm
+Length:57mm"
+Microwave Ablation at 10.0 GHz Achieves Comparable Ablation Zones to 1.9 GHz in Ex Vivo Bovine Liver-2014,42W,5 minutes,105°C,"Width:30mm
+Length: 55mm"
+Microwave Ablation at 10.0 GHz Achieves Comparable Ablation Zones to 1.9 GHz in Ex Vivo Bovine Liver-2014,42W,5 minutes,105°C,"Width:30mm
+Length:50mm"
+Microwave Ablation at 10.0 GHz Achieves Comparable Ablation Zones to 1.9 GHz in Ex Vivo Bovine Liver-2014,42W,5 minutes,105°C,"Width:28mm
+Length:51mm"
+Microwave Ablation at 10.0 GHz Achieves Comparable Ablation Zones to 1.9 GHz in Ex Vivo Bovine Liver-2014,42W,10 minutes,112°C,"Width:38mm
+Length:73mm"
+Microwave Ablation at 10.0 GHz Achieves Comparable Ablation Zones to 1.9 GHz in Ex Vivo Bovine Liver-2014,42W,10 minutes,112°C,"Width:35mm
+Length:65mm"
+Microwave Ablation at 10.0 GHz Achieves Comparable Ablation Zones to 1.9 GHz in Ex Vivo Bovine Liver-20214,42W,10 minutes,112°C,"Width:37mm
+Length:70mm"
+Microwave Ablation at 10.0 GHz Achieves Comparable Ablation Zones to 1.9 GHz in Ex Vivo Bovine Liver-2014,42W,10 minutes,112°C,"Width:35mm
+Length:67mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",20W,3 minutes,NA,"Width: 18.4mm
+Length: 22.6mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",20W,5 minutes,NA,"Width: 27.7mmmm
+Length: 32.2mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",20W,10 minutes,NA,"Width: 33.7mm
+Length: 41.7mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",30W,3 minutes,NA,"Width: 25.4mm
+Length: 32.1mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",30W,5 minutes,NA,"Width: 31.5mm
+Length: 39.3mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",30W,10 minutes,NA,"Width: 36.1mm
+Length: 44.7mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",40W,3 minutes,NA,"Width: 32.1mm
+Length: 38.5mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",40W,5 minutes,NA,"Width: 38,,
+Length: 44.2mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",40W,10 minutes,NA,"Width: 44.7mm
+Length: 55.9mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",50W,3 minutes,NA,"Width: 28.5mm
+Length: 37.3mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",50W,5 minutes,NA,"Width: 34.4mm
+Length: 44.3mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",50W,10 minutes,NA,"Width: 45.6mm
+Length: 57.6mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",60W,2 minutes,NA,"Width: 25.3mm
+Length: 36mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",60W,3 minutes,NA,"Width: 29.6mm
+Length: 40.3mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",60W,5 minutes,NA,"Width: 35.8mm
+Length: 50.1mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",80W,2 minutes,NA,"Width: 29.0mm
+Length: 44.4mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",80W,3 minutes,NA,"Width: 34.0mm
+Length: 48.9mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",80W,5 minutes,NA,"Width: 33.7mm
+Length: 48.5mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",100W,2 minutes,NA,"Width: 33.7mm
+Length: 48.5mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",100W,3 minutes,NA,"Width: 39.3mm
+Length: 58.2mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",100W,5 minutes,NA,"Width: 42mm
+Length: 62.8mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",120W,2 minutes,NA,"Width: 34.7mm
+Length: 54.3mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",120W,3 minutes,NA,"Width: 43.6mm
+Length: 64.7mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",120W,5 minutes,107.6°C,"Width: 44.6mm
+Length: 70.4mm"
+A Directional Interstitial Antenna for Microwave Tissue Ablation: Theoretical and Experimental Investigation,80W,10 minutes,94°C,"Width: 56mm
+Diameter: 35.2mm"
+"Microwave ablation at 915 MHz vs 2.45 GHz: A theoretical
+and experimental investigation",30W,5 minutes,105°C,"Diameter: 32.4mm
+Height: 55mm"
+"Microwave ablation at 915 MHz vs 2.45 GHz: A theoretical
+and experimental investigation",30W,10 minutes,118°C,"Diameter: 36.3mm
+Height: 56mm"
+"Microwave Ablation: Comparison of Simultaneous and Sequential Activation of Multiple Antennas in Liver Model Systems-2015 
+
+Activation type: Sequential activation of a 2 antenna array",50W,15 minutes,93.2°C,"Diameter: 38.8mm
+Length: 39.5mm"
+"Microwave Ablation: Comparison of Simultaneous and Sequential Activation of Multiple Antennas in Liver Model Systems-2015 
+
+Activation type: Sequential activation of a 2 antenna array",50W,5 minutes,103°C,"Diameter: 35.6mm
+Length: 45.1mm"
+"Microwave Ablation: Comparison of Simultaneous and Sequential Activation of Multiple Antennas in Liver Model Systems-2015 
+
+Activation type: Sequential activation of a 3 antenna array",50W,25 minutes,95.2°C,"Diameter: 37.6mm
+Length: 45.7mm"
+"Microwave Ablation: Comparison of Simultaneous and Sequential Activation of Multiple Antennas in Liver Model Systems-2015 
+
+Activation type: Sequential activation of a 3 antenna array",50W,5 minutes,104°C,"Diameter: 39.7mm
+Length: 49.7mm"
+"Microwave Ablation: Comparison of Simultaneous and Sequential Activation of Multiple Antennas in Liver Model Systems-2015 
+
+Activation type: Sequential activation of a 2 antenna array",65W,15 minutes,NA,"Diameter: 31.8mm
+Length: 35.2mm"
+"Microwave Ablation: Comparison of Simultaneous and Sequential Activation of Multiple Antennas in Liver Model Systems-2015 
+
+Activation type: Simultaneous activation of  2 antenna array",65W,5 minutes,NA,"Diameter: 33.3mm
+Length: 37.2mm"
+"Microwave Ablation: Comparison of Simultaneous and Sequential Activation of Multiple Antennas in Liver Model Systems-2015
+
+Activation type: Sequential activation of a 3 antenna array",65W,25 minutes,NA,"Diameter: 35.3mm
+Length: 40.3mm"
+"Microwave Ablation: Comparison of Simultaneous and Sequential Activation of Multiple Antennas in Liver Model Systems-2015
+
+Activation type: Simultaneous activation of  3 antenna arraya",65W,5 minutes,NA,"Diameter: 40.2mm
+Length: 46.8mm"
+"Analysis of minimally invasive directional
+antennas for microwave tissue ablation- 2016",40W,5 minutes,NA,"Width: 18mm
+Height: 18mm"
+"Analysis of minimally invasive directional
+antennas for microwave tissue ablation- 2016",40W,10 minutes,NA,"Width: 22.4mm
+Height: 19.8mm"
+"Analysis of minimally invasive directional
+antennas for microwave tissue ablation- 2016",77W,5 minutes,NA,"Width: 25.8mm
+Height: 29.7mm"
+"Analysis of minimally invasive directional
+antennas for microwave tissue ablation- 2016",77W,10 minutes,NA,"Width: 29.7mm
+Height: 26.4mm"
+Experimental measurement of microwave ablation heating pattern and comparison to computer simulations- 2016,15W,6 minutes,105°C,"Width: 13mm
+Length: 26.6mm"
+The impact of frequency on the performance of microwave ablation- 2016,25W,5 minutes,NA,"Lateral diameter: 27mm
+Longitudinal Diameter: 45mm"
+A Hybrid Slot/Monopole Antenna With Directional Heating Patterns for Microwave Ablation- 2017,20W,5 minutes,NA,"Width: 20mm
+Length:20mm"
+A Minimally Invasive Coax-Fed Microwave Ablation Antenna With a Tapered Balun- 2017,20W,5 minutes,NA,"Length: 32mm
+Depth: 30mm"
+A Minimally Invasive Coax-Fed Microwave Ablation Antenna With a Tapered Balun- 2017,20W,10 minutes,NA,"Length: 38mm
+Depth: 42mm"
+A Minimally Invasive Coax-Fed Microwave Ablation Antenna With a Tapered Balun- 2017,30W,5 minutes,NA,"Length: 37mm
+Depth: 34mm"
+A Minimally Invasive Coax-Fed Microwave Ablation Antenna With a Tapered Balun- 2017,30W,10 minutes,NA,"Length: 46mm
+Depth: 43mm"
+"Analysis of microwave ablation antenna optimization techniques- 2017
+
+Antenna type: Monopole
+Γ based optimisation",50W,5 minutes,NA,"Diameter: 23mm
+Length: 63.8mm"
+"Analysis of microwave ablation antenna optimization techniques- 2017
+
+Antenna type: Monopole
+SAR based optimisation",50W,5 minutes,NA,"Diameter: 25.5mm
+Length: 52mm"
+"Analysis of microwave ablation antenna optimisation techniques- 2017
+
+Antenna type: Monopole
+Temperature based optimisation",50W,5 minutes,NA,"Diameter: 24.5mm
+Length: 54.8mm"
+"Analysis of microwave ablation antenna optimization techniques- 2017
+
+Antenna type: Dual slot
+Γ based optimisation",50W,5 minutes,NA,"Diameter: 26.9mm
+Length: 70.6mm"
+"Analysis of microwave ablation antenna optimization techniques- 2017
+
+Antenna type: Dual slot
+SAR based optimisation",50W,5 minutes,NA,"Diameter: 29.4mm 
+Length: 47.7mm"
+"Analysis of microwave ablation antenna optimisation techniques- 2017
+
+Antenna type: Dual slot
+Temperature based optimisation",50W,5 minutes,NA,"Diameter: 23.1mm
+Length: 66.3mm"
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,50W,2 minutes,NA,Diameter: 24mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,50W,4 minutes,NA,29.5mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,50W,6 minutes,NA,33mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,50W,8 minutes,NA,39mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,50W,10 minutes,NA,42.5mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,50W,12 minutes,NA,45mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,50W,16 minutes,NA,44.5mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,50W,20 minutes,NA,47mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,100W,2 minutes,NA,27mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,100W,4 minutes,NA,35mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,100W,6 minutes,NA,39.5mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,100W,8 minutes,NA,45.5mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,100W,10 minutes,NA,50mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,100W,12 minutes,NA,54.5mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,100W,16 minutes,NA,60.5mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,100W,20 minutes,NA,63.5mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,150W,2 minutes,NA,33mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,150W,4 minutes,NA,40.5mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,150W,6 minutes,NA,44mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,150W,8 minutes,NA,49mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,150W,10 minutes,NA,61mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,150W,12 minutes,NA,65.5mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,150W,16 minutes,NA,70.5mm
+Interstitial microwave treatment for cancer: historical basis and current techniques in antenna design and performance- 2017,150W,20 minutes,NA,Diameter: 76mm
+"Microwave ablation in primary and secondary
+liver tumours: technical and clinical approaches- 2017",50W,6 minutes,NA,"Length: 37mm
+Width: 34mm"
+"Reduced-Diameter Designs of Coax-Fed Microwave Ablation Antennas Equipped With Baluns- 2017
+",30W,5 minutes,NA,"Length: 40mm
+Width: 28mm"
+"A coaxial slot antenna with a frequency of 433 MHz for microwave ablation therapies: design, simulation, and experimental research- 2017
+
+Antenna Type: tri-slot antenna",50W,10 minutes,NA,"Length: 88mm
+Diameter1: 22mm
+Diameter2: 27mm"
+"A coaxial slot antenna with a frequency of 433 MHz for microwave ablation therapies: design, simulation, and experimental research- 2017
+
+Antenna Type: tri-slot antenna",60W,10minutes,120°C,"Length: 90mm
+Diameter1: 26mm
+Diameter2: 33m"
+"A coaxial slot antenna with a frequency of 433 MHz for microwave ablation therapies: design, simulation, and experimental research- 2017
+
+Antenna Type: tri-slot antenna",70W,10 minutes,NA,"Length: 94mm
+Diameter1: 24mm
+Diameter2: 38mm"
+"A coaxial slot antenna with a frequency of 433 MHz for microwave ablation therapies: design, simulation, and experimental research- 2017
+
+Antenna Type: tri-slot antenna",80W,10 minutes,NA,"Length: 95mm
+Diameter1: 27mm
+Diameter2: 35mm"
+"A coaxial slot antenna with a frequency of 433 MHz for microwave ablation therapies: design, simulation, and experimental research- 2017
+
+Antenna Type: single-slot antenna",50W,10 minutes,NA,"Length: 79mm
+Diameter1: 20mm
+Diameter2: 26mm"
+"A coaxial slot antenna with a frequency of 433 MHz for microwave ablation therapies: design, simulation, and experimental research- 2017
+
+Antenna Type: single-slot antenna",60W,10 minutes,170°C,"Length: 80mm
+Diameter1: 25mm
+Diameter2: 35mm"
+"A coaxial slot antenna with a frequency of 433 MHz for microwave ablation therapies: design, simulation, and experimental research- 2017
+
+Antenna Type: single-slot antenna",70W,10 minutes,NA,"Length: 85mm
+Diameter1: 27mm
+Diameter2: 34mm"
+"A coaxial slot antenna with a frequency of 433 MHz for microwave ablation therapies: design, simulation, and experimental research- 2017
+
+Antenna Type: single-slot antenna",80W,10 minutes,NA,"Length: 90mm
+Diameter1: 27mm
+Diameter2: 38mm"
+"In Vitro and In Vivo Evaluation of the Thermal Patterns and Lesions of Catheter Ablation with a Microwave Monopole Antenna-2004   
+
+Antenna Type: Monopole antenna                                                                                                                               ",24W,0.5 minutes,57°C,depth = 4 mm
+"In Vitro and In Vivo Evaluation of the Thermal Patterns and Lesions of Catheter Ablation with a Microwave Monopole Antenna-2004   
+
+Antenna Type: Monopole antenna                                                                                                                               ",24W,1 minutes,67°C,depth = 7 mm
+"In Vitro and In Vivo Evaluation of the Thermal Patterns and Lesions of Catheter Ablation with a Microwave Monopole Antenna-2004   
+
+Antenna Type: Monopole antenna                                                                                                                               ",24W,1.5 minutes,67°C,depth = 8 mm
+"In Vitro and In Vivo Evaluation of the Thermal Patterns and Lesions of Catheter Ablation with a Microwave Monopole Antenna-2004   
+
+Antenna Type: Monopole antenna                                                                                                                               ",24W,2 minutes,67°C,depth = 8 mm
+"In Vitro and In Vivo Evaluation of the Thermal Patterns and Lesions of Catheter Ablation with a Microwave Monopole Antenna-2004   
+
+Antenna Type: Monopole antenna                                                                                                                               ",31W ,NA,77°C,depth = NA
+"In Vitro and In Vivo Evaluation of the Thermal Patterns and Lesions of Catheter Ablation with a Microwave Monopole Antenna-2004   
+
+Antenna Type: Monopole antenna                                                                                                                               ",31W,NA,57°C,depth = 5 mm
+"In Vitro and In Vivo Evaluation of the Thermal Patterns and Lesions of Catheter Ablation with a Microwave Monopole Antenna-2004   
+
+Antenna Type: Monopole antenna                                                                                                                               ",21W,1 minutes,NA,"width = 5 mm
+depth = 7 mm"
+"In Vitro and In Vivo Evaluation of the Thermal Patterns and Lesions of Catheter Ablation with a Microwave Monopole Antenna-2004   
+
+Antenna Type: Monopole antenna                                                                                                                               ",27W,1 minutes,NA,"width = 7 mm
+depth = 10 mm"
+"In Vitro and In Vivo Evaluation of the Thermal Patterns and Lesions of Catheter Ablation with a Microwave Monopole Antenna-2004   
+
+Antenna Type: Monopole antenna                                                                                                                               ",33W,1 minutes,NA,"width = 7 mm
+depth = 13 mm"
+Non-coaxial-based microwave ablation antennas for creating symmetric and asymmetric coagulation zones- 2018,18W,10 minutes,82°C,"Length: 35mm
+Diameter: 25mm"
+Non-coaxial-based microwave ablation antennas for creating symmetric and asymmetric coagulation zones- 2018,25W,5 minutes,NA,"Length: 20mm
+Width: 18mm"
+Microwave antennas for thermal ablation of benign adrenal adenomas- 2019,30W,0.5 minutes,NA,"Length: 9.2mm
+Width: 6.6mm"
+Microwave antennas for thermal ablation of benign adrenal adenomas- 2019,30W,1 minute,NA,"Length: 11mm
+Width: 11.2mm"
+Microwave antennas for thermal ablation of benign adrenal adenomas- 2019,30W,1.5minutes,NA,"Length: 11.6mm
+Width: 12.7mm"
+Microwave antennas for thermal ablation of benign adrenal adenomas- 2019,40W,0.5 minutes,NA,"Length: 8.2mm
+Width: 7.3mm"
+Microwave antennas for thermal ablation of benign adrenal adenomas- 2019,40W,1 minute,NA,"Length: 14.4mm
+Width: 14.7mm"
+Microwave antennas for thermal ablation of benign adrenal adenomas- 2019,40W,1.5 minutes,NA,"Length: 17.1mm
+Width: 17.6mm"
+"Design of Microwave Ablation Antenna for 
+Flexible Omnidirectional/Directional Ablation
+Zone Control - 2025
+
+Antenna Type: Omnidirectional Antenna",20W, 1 minute,NA,"Length: 21 mm
+Width d1: 4 mm 
+Width d2: 4 mm
+
+d1 - radial distance on one side of antenna
+d2 - radial distance on opposite side"
+"Design of Microwave Ablation Antenna for 
+Flexible Omnidirectional/Directional Ablation
+Zone Control - 2025
+
+Antenna Type: Omnidirectional Antenna",20W,3 minutes,NA,"Length: 22 mm
+Width d1: 10mm
+Width d2: 10 mm"
+"Design of Microwave Ablation Antenna for 
+Flexible Omnidirectional/Directional Ablation
+Zone Control - 2025
+
+Antenna Type: Omnidirectional Antenna",20W,5 minutes,NA,"Length: 32mm
+Width d1: 12mm
+Width d2: 12mm"
+"Design of Microwave Ablation Antenna for 
+Flexible Omnidirectional/Directional Ablation
+Zone Control - 2025
+
+Antenna Type: Omnidirectional Antenna",20W,7 minutes,NA,"Length: 35 mm
+Width d1: 12 mm
+Width d2: 14 mm"
+"Design of Microwave Ablation Antenna for 
+Flexible Omnidirectional/Directional Ablation
+Zone Control - 2025
+
+Antenna Type: Directional Antenna",20W,1 minute,NA,"Length: 13 mm
+Width d1: 6 mm
+Width d2: 0 mm"
+"Design of Microwave Ablation Antenna for 
+Flexible Omnidirectional/Directional Ablation
+Zone Control - 2025
+
+Antenna Type: Directional Antenna",20W,3 minutes,NA,"Length: 23 mm
+Width d1: 10 mm
+Width d2: 1 mm"
+"Design of Microwave Ablation Antenna for 
+Flexible Omnidirectional/Directional Ablation
+Zone Control - 2025
+
+Antenna Type: Directional Antenna",20W,5 minutes,NA,"Length: 22 mm
+Width d1: 11 mm
+Width d2: 1 mm"
+"Design of Microwave Ablation Antenna for 
+Flexible Omnidirectional/Directional Ablation
+Zone Control - 2025
+
+Antenna Type: Directional Antenna",20W,7 minutes,NA,"Length: 39 mm
+Width d1: 18 mm
+Width d2: 8 mm"
+"Microwave Antenna Design for Cardiovascular
+Applications: A Comparison Between a
+Balanced and Unbalanced Microwave
+Ablation Antenna -2023
+
+Antenna Type: MRSA",40 W,2 minutes,72.37°C,"Length: 14.39 mm
+Width: 18.66 mm"
+"Microwave Antenna Design for Cardiovascular
+Applications: A Comparison Between a
+Balanced and Unbalanced Microwave
+Ablation Antenna -2023
+
+Antenna type: Monopole",40 W,2 minutes,84.92°C,"Length: 17.80 mm
+Width: 24.92 mm"
+"A Flexible Microwave Ablation Antenna for Lung Cancer Treatment -2023
+
+Antenna Type: Flexible meandered monopole MWA antenna",10 W,3.5 minutes,60 °C,"Length: 24 mm
+Width: 12 mm"
+"Feasibility Study of Microsecond Pulsed Microwave
+Ablation Using a Minimally Invasive Antenna -2022
+CASE 1: On Egg Whites
+
+Antenna Type: Floating-sleeve dipole antenna (Pulsed MWA mode)",25 kW,10 minutes,>100 °C,"Length: 27 mm
+Width: 27 mm"
+"Feasibility Study of Microsecond Pulsed Microwave
+Ablation Using a Minimally Invasive Antenna -2022
+CASE 1: On Egg Whites
+
+Antenna Type: Floating-sleeve dipole antenna (Continuous MWA mode)",25 kW,10 minutes,>100 °C,"Length: 30 mm
+Width: 30 mm"
+"Feasibility Study of Microsecond Pulsed Microwave
+Ablation Using a Minimally Invasive Antenna -2022
+CASE 2: On Bovine Liver
+
+Antenna Type: Floating-sleeve dipole antenna ",25 kW,2 minutes,>100 °C,"Length: 15.7 mm
+Width: 12.7 mm"
+"Feasibility Study of Microsecond Pulsed Microwave
+Ablation Using a Minimally Invasive Antenna -2022
+CASE 2: On Bovine Liver
+
+Antenna Type: Floating-sleeve dipole antenna ",25 kW,6 minutes,>100 °C,"Length: 26.7 mm
+Width: 19.3 mm"
+"Feasibility Study of Microsecond Pulsed Microwave
+Ablation Using a Minimally Invasive Antenna -2022
+CASE 2: On Bovine Liver
+
+Antenna Type: Floating-sleeve dipole antenna ",25 kW,8 minutes,>100 °C,"Length: 21.5 mm
+Width: 18.7 mm"
+"Feasibility Study of Microsecond Pulsed Microwave
+Ablation Using a Minimally Invasive Antenna -2022
+CASE 2: On Bovine Liver
+
+Antenna Type: Floating-sleeve dipole antenna ",25 kW,12 minutes,>100 °C,"Length: 19 mm
+Width: 16 mm"
+"A Minimally Invasive Microwave Ablation Antenna With Highly Localized Ablation Zone -2022
+
+Antenna Type: Monopole SICL Antenna",20 W,5 minutes,60°C,"Length: 32 mm
+Width: 24 mm"
+"A Minimally Invasive Microwave Ablation Antenna With Highly Localized Ablation Zone -2022
+
+Antenna Type: Monopole SICL Antenna",20 W,10 minutes,60°C,"Length: 45 mm
+Width: 28 mm"
+"Triple Coaxial-Half-Slot Antenna Scheme With
+Deep Learning-Based Temperature Prediction for
+Hepatic Microwave Ablation: Finite Element
+Analysis and In Vitro Experiment - 2021
+
+Antenna Type: Coaxial Half-Slot antenna (10 mm spacing)",50 W,1 minute,60°C,"18,437 mm³"
+"Triple Coaxial-Half-Slot Antenna Scheme With
+Deep Learning-Based Temperature Prediction for
+Hepatic Microwave Ablation: Finite Element
+Analysis and In Vitro Experiment - 2021
+
+Antenna Type: Coaxial Half-Slot antenna (20 mm spacing)",50 W,10 minutes,60°C,"29,317 mm³"
+"Triple Coaxial-Half-Slot Antenna Scheme With
+Deep Learning-Based Temperature Prediction for
+Hepatic Microwave Ablation: Finite Element
+Analysis and In Vitro Experiment - 2021
+
+Antenna Type: Coaxial Half-Slot antenna (30 mm spacing)",50 W,21 minutes,60°C,"63,504 mm³"
+"Flexible Microwave Ablation Antenna - Data Extraction Analysis -2021 (For Egg White Experiments - Non-Perfused)
+
+Antenna Type: Semi-rigid Antenna - Continuous wave (CW) power delivery",5 W,20 minutes,40°C,"Length: 15 mm
+Width: 12 mm"
+"Flexible Microwave Ablation Antenna - Data Extraction Analysis -2021 (For Egg White Experiments - Non-Perfused)
+
+Antenna Type: Semi-rigid Antenna - Continuous wave (CW) power delivery",10 W,10 minutes,50°C,"Length: 25 mm
+Width: 15 mm"
+"Flexible Microwave Ablation Antenna - Data Extraction Analysis -2021 (For Egg White Experiments - Non-Perfused)
+
+Antenna Type: Semi-rigid Antenna - Continuous wave (CW) power delivery",15 W,6.7 minutes,60°C,"Length: 35 mm
+Width: 15 mm"
+"Flexible Microwave Ablation Antenna - Data Extraction Analysis -2021 (For Egg White Experiments - Non-Perfused)
+
+Antenna Type: Semi-rigid Antenna - Continuous wave (CW) power delivery",20 W,5 minutes,65°C,"Length: 40 mm
+Width: 15 mm"
+"Flexible Microwave Ablation Antenna - Data Extraction Analysis -2021 (For Egg White Experiments - Non-Perfused)
+
+Antenna Type: Semi-rigid Antenna - Pulsed power delivery",5 W,40 minutes,25°C,"Length: 8 mm
+Width: 5 mm"
+"Flexible Microwave Ablation Antenna - Data Extraction Analysis -2021 (For Egg White Experiments - Non-Perfused)
+
+Antenna Type: Semi-rigid Antenna - Pulsed power delivery",10 W,20 minutes,40°C,"Length: 20 mm
+Width: 10 mm"
+"Flexible Microwave Ablation Antenna - Data Extraction Analysis -2021 (For Egg White Experiments - Non-Perfused)
+
+Antenna Type: Semi-rigid Antenna - Pulsed power delivery",15 W,13.3 minutes,50°C,"Length: 30 mm
+Width: 12 mm"
+"Flexible Microwave Ablation Antenna - Data Extraction Analysis -2021 (For Egg White Experiments - Non-Perfused)
+
+Antenna Type: Semi-rigid Antenna - Pulsed power delivery",20 W,10 minutes,55°C,"Length: 35 mm
+Width: 13 mm"
+"Flexible Microwave Ablation Antenna - Data Extraction Analysis -2021 (For Perfused Porcine liver with blood flow)
+
+Antenna Type: Semi-rigid Antenna - Continuous Wave  (CW) power delivery",10 W,10 minutes,NA,"Length: 30 mm
+Width: 12 mm"
+"Flexible Microwave Ablation Antenna - Data Extraction Analysis -2021 (For Perfused Porcine liver with blood flow)
+
+Antenna Type: Semi-rigid Antenna - Continuous Wave  (CW) power delivery",15 W,6.7 minutes,NA,"Length: 32 mm
+Width: 14 mm"
+"Flexible Microwave Ablation Antenna - Data Extraction Analysis -2021 (For Perfused Porcine liver with blood flow)
+
+Antenna Type: Semi-rigid Antenna - Pulsed power delivery",10 W,20 minutes,NA,"Length: 23-28 mm
+Width: 20-30 mm"
+"Flexible Microwave Ablation Antenna - Data Extraction Analysis -2021 (For Perfused Porcine liver with blood flow)
+
+Antenna Type: Semi-rigid Antenna - Pulsed power delivery",15 W,13.3 minutes,NA,"Length: 28-32 mm
+Width: 20-25 mm"
+"A Microwave Ablation Antenna Based on
+Substrate-Integrated Coaxial Line -2021
+
+Antenna Type: Double Dipole Substrate-Integrated Coaxial Line (SICL) Antenna",20 W,5 minutes,60°C,"Length: 15 mm
+Width: 24 mm"
+"A Microwave Ablation Antenna Based on
+Substrate-Integrated Coaxial Line -2021
+
+Antenna Type: Double Dipole Substrate-Integrated Coaxial Line (SICL) Antenna",20 W,10 minutes,60°C,"Length: 26 mm
+Width: 37 mm"
+"Toward Flexible Microwave Ablation Antennas
+With a Balun-Free Helical Dipole Design -2020
+
+Antenna Type: Balun-free helical dipole antenna ",40 W,5 minutes,60°C,"Length: 39.2 mm
+Width: 30.6 mm"
+"The Performance of Higher Frequency Microwave Ablation in the Presence of Perfusion -2019 (Non-Perfused Liver)
+
+Antenna Type: Floating-Sleeve Dipole (FSD) microwave ablation antenna",25 W,5 minutes,NA,"Length: Not Given
+Width: 24 mm"
+"The Performance of Higher Frequency Microwave Ablation in the Presence of Perfusion -2019 (Perfused Liver)
+
+Antenna Type: Floating-Sleeve Dipole (FSD) microwave ablation antenna",25 W,5 minutes,NA,"Length: Not given
+Width: 16 mm"
+Microwave Ablation With a Triaxial Antenna: Results in ex vivo Bovine Liver-2005    Antenna type: Triaxial microwave antenna ,25 W,1 minute,NA,diameter = 13 mm
+Microwave Ablation With a Triaxial Antenna: Results in ex vivo Bovine Liver-2005    Antenna type: Triaxial microwave antenna ,25 W,2 minutes,NA,diameter = 19 mm
+Microwave Ablation With a Triaxial Antenna: Results in ex vivo Bovine Liver-2005    Antenna type: Triaxial microwave antenna ,25 W,3 minutes,NA,diameter = 22 mm
+Microwave Ablation With a Triaxial Antenna: Results in ex vivo Bovine Liver-2005    Antenna type: Triaxial microwave antenna ,25 W,5 minutes,NA,diameter = 26 mm
+Microwave Ablation With a Triaxial Antenna: Results in ex vivo Bovine Liver-2005    Antenna type: Triaxial microwave antenna ,25 W,7 minutes,NA,diameter = 29 mm
+Microwave Ablation With a Triaxial Antenna: Results in ex vivo Bovine Liver-2005    Antenna type: Triaxial microwave antenna ,25 W,10 minutes,NA,diameter = 31 mm
+Microwave Ablation With a Triaxial Antenna: Results in ex vivo Bovine Liver-2005    Antenna type: Triaxial microwave antenna ,10 W,10 minutes,NA,diameter = 16 mm
+Microwave Ablation With a Triaxial Antenna: Results in ex vivo Bovine Liver-2005    Antenna type: Triaxial microwave antenna ,20 W,10 minutes,NA,diameter = 23 mm
+Microwave Ablation With a Triaxial Antenna: Results in ex vivo Bovine Liver-2005    Antenna type: Triaxial microwave antenna ,30 W,10 minutes,NA,diameter = 29 mm
+Microwave Ablation With a Triaxial Antenna: Results in ex vivo Bovine Liver-2005    Antenna type: Triaxial microwave antenna ,40 W,10 minutes,NA,diameter = 33 mm
+Microwave Ablation With a Triaxial Antenna: Results in ex vivo Bovine Liver-2005    Antenna type: Triaxial microwave antenna ,50 W,10 minutes,NA,diameter = 36  mm
+Microwave Ablation With a Triaxial Antenna: Results in ex vivo Bovine Liver-2005    Antenna type: Triaxial microwave antenna ,50 W,7 minutes,NA,diameter = 36.4 mm
+A Floating Sleeve Antenna Yields Localized Hepatic Microwave Ablation --2006 Antenna Type: Floating sleeve coaxial antenna (Ex vivo)           ,120 W,2.5 minutes,NA,"width = 58.7 mm, depth = 36.4 mm        "
+Microwave Ablation with a Single Small-Gauge Triaxial Antenna: In Vivo Porcine Liver Model (2007)Antenna type:Triaxial microwave antenna,68 W,2 minutes,NA,diameter=20.5 mm
+Microwave Ablation with a Single Small-Gauge Triaxial Antenna: In Vivo Porcine Liver Model (2007)Antenna type:Triaxial microwave antenna,68 W,3 minutes,NA,diameter=20.6mm
+Microwave Ablation with a Single Small-Gauge Triaxial Antenna: In Vivo Porcine Liver Model (2007)Antenna type:Triaxial microwave antenna,68 W,4 minutes,NA,diameter=22.7 mm
+Microwave Ablation with a Single Small-Gauge Triaxial Antenna: In Vivo Porcine Liver Model (2007)Antenna type:Triaxial microwave antenna,68  W,5 minutes,NA,diameter=25 .0 mm
+Microwave Ablation with a Single Small-Gauge Triaxial Antenna: In Vivo Porcine Liver Model (2007)Antenna type:Triaxial microwave antenna,68 W,6 minutes,NA,diameter=23.7mm
+Microwave Ablation with a Single Small-Gauge Triaxial Antenna: In Vivo Porcine Liver Model (2007)Antenna type:Triaxial microwave antenna,68  W,7 minutes,NA,diameter=23.9 mm
+Microwave Ablation with a Single Small-Gauge Triaxial Antenna: In Vivo Porcine Liver Model (2007)Antenna type:Triaxial microwave antenna,68 W,10 minutes,NA,diameter=20.7 mm
+Microwave Ablation with a Single Small-Gauge Triaxial Antenna: In Vivo Porcine Liver Model (2007)Antenna type:Triaxial microwave antenna,68 W,12  minutes,NA,diameter=25.9 mm
+Microwave Ablation with Multiple Simultaneously Powered Small-Gauge Triaxial Antennas: Results from an In Vivo Swine Liver Model (2007)                                                                                   Antenna type:Triaxial Antenna,55 W	,10 minutes,NA,26.4 mm
+Microwave Ablation with Multiple Simultaneously Powered Small-Gauge Triaxial Antennas: Results from an In Vivo Swine Liver Model (2007)                                                                                   Antenna type:Triaxial Antenna,165 W,10 minutes,NA, 50.6 mm
+Microwave Ablation with Multiple Simultaneously Powered Small-Gauge Triaxial Antennas: Results from an In Vivo Swine Liver Model (2007)                                                                                   Antenna type:Triaxial Antenna,165 W,10 minutes,NA,53.4 mm
+Internally cooled antenna for microwave ablation: Results in ex vivo and in vivo porcine livers(2008) Antenna type:cooled antenna  :ex vivo,50 W,10 minutes,NA,"width = 26.4 mm, depth = 36.4 mm"
+Internally cooled antenna for microwave ablation: Results in ex vivo and in vivo porcine livers(2008) Antenna type:cooled antenna  :ex vivo,60 W,10 minutes,NA,"width = 28.9 mm, depth = 41.5 mm"
+Internally cooled antenna for microwave ablation: Results in ex vivo and in vivo porcine livers(2008) Antenna type:cooled antenna  :ex vivo,70 W,10 minutes,NA,"width = 31.5 mm, depth = 45.9 mm"
+Internally cooled antenna for microwave ablation: Results in ex vivo and in vivo porcine livers(2008) Antenna type:cooled antenna  :ex vivo,80 W,10 minutes,NA,"width = 32.6 mm, depth = 50.3 mm"
+Internally cooled antenna for microwave ablation: Results in ex vivo and in vivo porcine livers(2008) Antenna type:cooled antenna :in vivo,50 W,10 minutes,NA,"width = 23.2 mm, depth = 32.3 mm"
+Internally cooled antenna for microwave ablation: Results in ex vivo and in vivo porcine livers(2008) Antenna type:cooled antenna :in vivo,60 W,10 minutes,NA,"width = 23.5 mm, depth = 40.2 mm"
+Internally cooled antenna for microwave ablation: Results in ex vivo and in vivo porcine livers(2008) Antenna type:cooled antenna :in vivo,70 W,10 minutes,NA,"width = 23.7 mm, depth = 44.2 mm"
+Internally cooled antenna for microwave ablation: Results in ex vivo and in vivo porcine livers(2008) Antenna type:cooled antenna :in vivo,80 W,10 minutes,NA,"width = 23.7 mm, depth = 49.2 mm"
+An Optimal Sliding Choke Antenna for Hepatic Microwave Ablation(2009)      Antenna type:Sliding Choke antenna              ,100 W,1.1 minutes,NA,"width = 14.9 mm, depth = 22.5 mm                               "
+Finite-Element Analysis and In Vitro Experiments of Placement Configurations Using Triple Antennas in Microwave Hepatic Ablation(2009)                           Antenna type:Triple antenna   : IN VITRO,50 W,1 minute,NA,"width = 30.1 mm, depth = 39.0 mm"
+Finite-Element Analysis and In Vitro Experiments of Placement Configurations Using Triple Antennas in Microwave Hepatic Ablation(2009)                           Antenna type:Triple antenna   : IN VITRO,50 W,1 minute,NA,"width = 20.1 mm, depth = 18.2 mm"
+Finite-Element Analysis and In Vitro Experiments of Placement Configurations Using Triple Antennas in Microwave Hepatic Ablation(2009)                           Antenna type:Triple antenna   : IN VITRO,50 W,1 minute,NA,"width = 27.4 mm, depth = 29.4 mm"
+Finite-Element Analysis and In Vitro Experiments of Placement Configurations Using Triple Antennas in Microwave Hepatic Ablation(2009)                           Antenna type:Triple antenna   : IN VITRO,50 W,1 minute,NA,"width = 43.7 mm, depth = 79.1 mm"
+"Microwave Tumor Ablation: Mechanism of Action, Clinical Results and Devices (2010)  Antenna type:Triaxial Antenna  :IN VIVO",68W,2 minutes,NA,diameter =23mm
+"Microwave Tumor Ablation: Mechanism of Action, Clinical Results and Devices (2010)  Antenna type:Triaxial Antenna  :IN VIVO",68 W,6 minutes,NA,diameter=60 mm
+"Microwave Tumor Ablation: Mechanism of Action, Clinical Results and Devices (2010)  Antenna type:Triaxial Antenna  :IN VIVO",68 W,12 minutes,NA,diameter=80mm
+"Microwave Tumor Ablation: Mechanism of Action, Clinical Results and Devices (2010)  Antenna type:Monopole antenna :IN VIVO",100 W,2 minutes,NA,volume=33500 mm cube
+"Microwave Tumor Ablation: Mechanism of Action, Clinical Results and Devices (2010)  Antenna type:Monopole antenna :IN VIVO",100 W,4 minutes,NA,volume=37500 mm cube
+"Microwave Tumor Ablation: Mechanism of Action, Clinical Results and Devices (2010)  Antenna type:Monopole antenna :IN VIVO",100 W,8 minutes,NA,volume=92000 mm cube
+"Microwave Tumor Ablation: Mechanism of Action, Clinical Results and Devices (2010)  Antenna type:Cooled  coaxial antenna :EX VIVO",80 W,10 minutes,NA,diameter=50.3 mm
+"Microwave Tumor Ablation: Mechanism of Action, Clinical Results and Devices (2010)  Antenna type:Cooled  coaxial antenna :EX VIVO",80 W,10 minutes,NA,diameter=49.2mm
+"Microwave Tumor Ablation: Mechanism of Action, Clinical Results and Devices (2010) Antenna type :Multiples Antenna : CLINICAL  ",125 W,10  minutes,NA,diameter=30mm
+"Microwave Tumor Ablation: Mechanism of Action, Clinical Results and Devices (2010)  Antenna type:Lung Antenna:  CLINICAL",55 W,10 minutes,NA,diameter=34 mm
+"Microwave Tumor Ablation: Mechanism of Action, Clinical Results and Devices (2010) Antenna type:Multiple triaxial antenna : IN VIVO  ",90 W,5 minutes,NA,diameter=65 mm

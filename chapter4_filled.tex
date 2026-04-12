@@ -1,0 +1,166 @@
+\chapter{Methodology}
+
+\section{Data Preprocessing}
+
+\subsection{Feature Engineering}
+
+Raw text fields were parsed into numerical features using regex-based extraction. The following features were engineered:
+
+\begin{table}[H]
+\centering
+\caption{Engineered features and their descriptions.}
+\label{tab:features}
+\begin{tabular}{ll}
+\toprule
+\textbf{Feature} & \textbf{Formula / Description} \\
+\midrule
+\texttt{power\_watts}         & Input power in Watts \\
+\texttt{time\_minutes}        & Treatment duration in minutes \\
+\texttt{energy\_joules}       & $\text{power} \times \text{time} \times 60$ (total energy delivered) \\
+\texttt{power\_time\_product} & $\text{power} \times \text{time}$ \\
+\texttt{log\_power}           & $\ln(1 + \text{power})$ \\
+\texttt{log\_time}            & $\ln(1 + \text{time})$ \\
+\texttt{log\_energy}          & $\ln(1 + \text{energy})$ \\
+\texttt{sqrt\_time}           & $\sqrt{\text{time}}$ (models diffusion-like growth) \\
+\texttt{is\_simulated}        & 0 = Experimental, 1 = Simulated \\
+\texttt{antenna\_encoded}     & Label-encoded antenna category (0--14) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent\textbf{Rationale for engineered features:}
+\begin{itemize}
+    \item \textbf{Energy}: Heat generation is proportional to energy deposited, not just power.
+    \item \textbf{Log transforms}: Account for diminishing returns at high values (saturation effects).
+    \item $\boldsymbol{\sqrt{\text{time}}}$: Thermal diffusion in tissue follows a square-root relationship with time.
+    \item \textbf{Interaction term}: Captures the non-linear combined effect of power and time.
+\end{itemize}
+
+
+\subsection{Outlier Removal}
+
+Samples with power $>200$\,W were removed (7 entries). These were pulsed microwave ablation studies using 25\,kW peak power --- a fundamentally different treatment modality that would distort the model.
+
+\noindent\textbf{After outlier removal: 319 samples.}
+
+
+\subsection{Feature Scaling and Encoding}
+
+\begin{itemize}
+    \item \textbf{StandardScaler} ($z$-score normalization) was applied for SVR, KNN, and MLP models (fitted on training data only to prevent data leakage).
+    \item \textbf{Tree-based models} (Random Forest, Gradient Boosting) do not require scaling.
+    \item \textbf{LabelEncoder} was used for the 15 antenna categories.
+\end{itemize}
+
+
+\subsection{Train--Test Split}
+
+An 80/20 random split (with \texttt{random\_state=42} for reproducibility) was used:
+
+\begin{table}[H]
+\centering
+\caption{Train--test split sizes for each target variable.}
+\label{tab:split}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Target} & \textbf{Train Samples} & \textbf{Test Samples} \\
+\midrule
+Effective Diameter & 233 & 59 \\
+Length             & 156 & 40 \\
+Both (multi-output)& 152 & 39 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Machine Learning Models}
+
+Six regression models were selected to cover a range of algorithmic approaches:
+
+\subsection{Ridge Regression}
+
+A linear regression model with \textbf{L2 regularization} (penalty on the sum of squared coefficients). It serves as the baseline linear model. Ridge is suitable for preventing multicollinearity issues arising from the correlated features (e.g., \texttt{power\_watts} and \texttt{energy\_joules}).
+
+\begin{itemize}
+    \item \textbf{Hyperparameters tuned}: $\alpha \in \{0.01,\; 0.1,\; 1.0,\; 10.0,\; 100.0\}$
+\end{itemize}
+
+
+\subsection{K-Nearest Neighbors (KNN)}
+
+A non-parametric, instance-based method that predicts by averaging the target values of the $k$ most similar training samples. KNN captures local patterns without making assumptions about the data distribution.
+
+\begin{itemize}
+    \item \textbf{Hyperparameters tuned}: $k \in \{3, 5, 7, 9, 11\}$, weights $\in$ \{uniform, distance\}, metric $\in$ \{euclidean, manhattan\}
+\end{itemize}
+
+
+\subsection{Support Vector Regression (SVR)}
+
+SVR maps input features to a higher-dimensional space using a \textbf{Radial Basis Function (RBF) kernel} and finds a hyperplane that fits the data within an $\varepsilon$-insensitive tube. It is effective for small datasets and can model non-linear relationships.
+
+\begin{itemize}
+    \item \textbf{Hyperparameters tuned}: $C \in \{0.1, 1.0, 10.0, 100.0\}$, $\gamma \in \{\text{scale}, \text{auto}, 0.01, 0.1\}$, $\varepsilon \in \{0.01, 0.1, 0.5\}$
+\end{itemize}
+
+
+\subsection{Random Forest}
+
+An \textbf{ensemble of decision trees}, each trained on a random bootstrap sample of the data with random feature subsets. The final prediction is the average of all trees. Random Forest is robust, handles non-linearity well, and provides feature importance rankings.
+
+\begin{itemize}
+    \item \textbf{Hyperparameters tuned}: \texttt{n\_estimators} $\in \{50, 100, 200\}$, \texttt{max\_depth} $\in \{5, 10, 15, \text{None}\}$, \texttt{min\_samples\_split} $\in \{2, 5\}$, \texttt{min\_samples\_leaf} $\in \{1, 2\}$
+\end{itemize}
+
+
+\subsection{Gradient Boosting Regressor}
+
+Builds an \textbf{additive ensemble of decision trees} sequentially, where each new tree corrects the errors of the previous ensemble. This iterative approach typically achieves higher accuracy than Random Forest at the cost of higher overfitting risk.
+
+\begin{itemize}
+    \item \textbf{Hyperparameters tuned}: \texttt{n\_estimators} $\in \{50, 100, 200\}$, \texttt{max\_depth} $\in \{3, 5, 7\}$, \texttt{learning\_rate} $\in \{0.01, 0.05, 0.1, 0.2\}$, \texttt{subsample} $\in \{0.8, 1.0\}$
+\end{itemize}
+
+
+\subsection{Multi-Layer Perceptron (MLP)}
+
+A feedforward \textbf{artificial neural network} with one or two hidden layers, trained using backpropagation. MLP can approximate complex non-linear mappings but requires careful regularization to avoid overfitting on small datasets.
+
+\begin{itemize}
+    \item \textbf{Hyperparameters tuned}: \texttt{hidden\_layer\_sizes} $\in \{(50,),\; (100,),\; (50, 25),\; (100, 50)\}$, activation $\in$ \{relu, tanh\}, $\alpha \in \{0.001, 0.01, 0.1\}$, learning\_rate = adaptive
+\end{itemize}
+
+
+\section{Evaluation Metrics}
+
+Four metrics were used for comprehensive model evaluation:
+
+\begin{table}[H]
+\centering
+\caption{Evaluation metrics used for model comparison.}
+\label{tab:metrics}
+\begin{tabular}{lll}
+\toprule
+\textbf{Metric} & \textbf{Formula} & \textbf{Interpretation} \\
+\midrule
+$R^2$ Score & $1 - \dfrac{SS_{\text{res}}}{SS_{\text{tot}}}$ & Proportion of variance explained ($1.0$ = perfect) \\[1em]
+MAE & $\dfrac{1}{n}\displaystyle\sum_{i=1}^{n}|y_i - \hat{y}_i|$ & Average absolute prediction error (mm) \\[1em]
+RMSE & $\sqrt{\dfrac{1}{n}\displaystyle\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}$ & Penalizes larger errors more heavily \\[1em]
+MAPE & $\dfrac{100}{n}\displaystyle\sum_{i=1}^{n}\dfrac{|y_i - \hat{y}_i|}{|y_i|}$ & Relative error as a percentage \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Hyperparameter Tuning}
+
+\textbf{GridSearchCV} with \textbf{10-fold cross-validation} was used for hyperparameter optimization. For each model:
+
+\begin{enumerate}
+    \item All combinations of hyperparameters were evaluated.
+    \item The combination maximizing cross-validated $R^2$ was selected.
+    \item The model was retrained on the full training set with the best parameters.
+    \item Final evaluation was performed on the held-out test set.
+\end{enumerate}
+
+This approach ensures that model selection is robust and not overly optimized to a single train--test split.

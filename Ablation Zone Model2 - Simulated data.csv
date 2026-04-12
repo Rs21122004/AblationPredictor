@@ -1,0 +1,347 @@
+PAPERS & REFERENCES,INPUT POWER,TIME,OUTPUT TEMPERATURE,ABLATION ZONE PARAMETERS
+"A Novel Multiphysics Optimization-Driven
+Methodology for the Design of Microwave
+Ablation Antennas - 2016
+
+Antenna Type: Interstitial linear array of cylindrical
+surface current elements",NA,4 minutes,130°C,Sphere of radius 10 mm
+"Multi-Objective Optimization Design and 
+Numerical Study of Water-Cooled Microwave Ablation
+Antennas -2025
+
+Antenna Type: Partially Water-Cooled coaxial dipole antennas (single objective optimization used)",50 W,6 minutes,>130°C,"Max transverse: 62.48 mm
+Min Axial: 20.76 mm"
+"Multi-Objective Optimization Design and 
+Numerical Study of Water-Cooled Microwave Ablation
+Antennas -2025
+
+Antenna Type: Partially Water-Cooled coaxial dipole antennas (multi objective optimization used)",50 W,6 minutes,>130°C,"Max transverse: 58.68 mm
+Min Axial: 21.13 mm"
+"Multi-Objective Optimization Design and 
+Numerical Study of Water-Cooled Microwave Ablation
+Antennas -2025
+
+Antenna Type: Fully Water-Cooled coaxial dipole antennas (single objective optimization used)",50 W,6 minutes,<130°C,"Max transverse: 60.58 mm
+Min Axial: 23.8 mm"
+"Multi-Objective Optimization Design and 
+Numerical Study of Water-Cooled Microwave Ablation
+Antennas -2025
+
+Antenna Type: Fully Water-Cooled coaxial dipole antennas  (multi objective optimization used)",50 W,6 minutes,<130°C,"Max transverse: 59.49 mm
+Min Axial: 22.23 mm"
+"Multi-Objective Optimization Design and 
+Numerical Study of Water-Cooled Microwave Ablation
+Antennas -2025
+
+Antenna Type: Partially Water-Cooled coaxial dipole antennas  ",70 W,6 minutes,>130°C,"Max transverse: 61.05mm
+Min Axial: 20.04 mm"
+"Multi-Objective Optimization Design and 
+Numerical Study of Water-Cooled Microwave Ablation
+Antennas -2025
+
+Antenna Type: Partially Water-Cooled coaxial dipole antennas  ",90 W,6 minutes,>130°C,"Max transverse: 62.64 mm
+Min Axial: 18.98 mm"
+"Multi-Objective Optimization Design and 
+Numerical Study of Water-Cooled Microwave Ablation
+Antennas -2025
+
+Antenna Type: Fully Water-Cooled coaxial dipole antennas  ",70 W,6 minutes,<130°C,"Max transverse: 62.8 mm
+Min Axial: 21.02 mm"
+"Multi-Objective Optimization Design and 
+Numerical Study of Water-Cooled Microwave Ablation
+Antennas -2025
+
+Antenna Type: Fully Water-Cooled coaxial dipole antennas  ",90 W,6 minutes,<130°C,"Max transverse: 64.81 mm
+Min Axial: 19.99 mm"
+"Microwave Antenna Design for Cardiovascular
+Applications: A Comparison Between a
+Balanced and Unbalanced Microwave
+Ablation Antenna -2023
+
+Antenna Type: MRSA",40 W,2 minutes,72.37°C,"Length: 9.41± 0.98 mm
+Width: 13.38 ± 0.60 mm"
+"Microwave Antenna Design for Cardiovascular
+Applications: A Comparison Between a
+Balanced and Unbalanced Microwave
+Ablation Antenna -2023
+
+Antenna type: Monopole",40 W,2 minute,84.92°C,"Length: 11.87 ± 0.88 mm
+Width: 18.28 ± 0.57 mm"
+"A Flexible Microwave Ablation Antenna for Lung Cancer Treatment -2023
+
+Antenna Type: Flexible meandered monopole MWA antenna",10 W,3.5 minutes,60 °C,"Length: 20 mm
+Width: 16 mm"
+"Effect of the antenna slot numbers and position on the performance of microwave ablation -2023
+
+Antenna Type: Monopole",10 W,10 minutes,93 °C,"Length: 51 mm
+Width: 20 mm"
+"Effect of the antenna slot numbers and position on the performance of microwave ablation -2023
+
+Antenna Type: Single Slot",10 W,10 minutes,95 °C,"Length: 65 mm
+Width: 24 mm"
+"Effect of the antenna slot numbers and position on the performance of microwave ablation -2023
+
+Antenna Type: Double Slot",10 W,10 minutes,107 °C,"Length: 67 mm
+Width: 35 mm"
+"Microwave ablation modeling with AMICA antenna: Validation by means a numerical analysis -2023
+
+Antenna Type: Single-slot coaxial antenna",100 W,5.5 minutes,95°C,"Length: 30 mm
+Width: 28 mm"
+"A Minimally Invasive Microwave Ablation Antenna With Highly Localized Ablation Zone -2022
+
+Antenna Type: Monopole SICL Antenna",20 W,5 minutes,60°C,"Length: 29.8 mm
+Width: 24.8 mm"
+"A Minimally Invasive Microwave Ablation Antenna With Highly Localized Ablation Zone -2022
+
+Antenna Type: Monopole SICL Antenna",20 W,10 minutes,60°C,"Length: 34.1 mm
+Width: 31.2 mm"
+"Triple Coaxial-Half-Slot Antenna Scheme With
+Deep Learning-Based Temperature Prediction for
+Hepatic Microwave Ablation: Finite Element
+Analysis and In Vitro Experiment - 2021
+
+Antenna Type: Coaxial Half-Slot antenna (10 mm spacing)",50 W,1 minute,60°C,"18,428 mm³"
+"Triple Coaxial-Half-Slot Antenna Scheme With
+Deep Learning-Based Temperature Prediction for
+Hepatic Microwave Ablation: Finite Element
+Analysis and In Vitro Experiment - 2021
+
+Antenna Type: Coaxial Half-Slot antenna (20 mm spacing)",50 W,10 minutes,60°C,"29,312 mm³"
+"Triple Coaxial-Half-Slot Antenna Scheme With
+Deep Learning-Based Temperature Prediction for
+Hepatic Microwave Ablation: Finite Element
+Analysis and In Vitro Experiment - 2021
+
+Antenna Type: Coaxial Half-Slot antenna (30 mm spacing)",50 W,21 minutes,60°C,"63,507 mm³"
+"Use of microwave ablation for thermal
+treatment of solid tumors with different
+shapes and sizes—A computational approach -2020
+
+Antenna Type: Co-axial slot antenna",25 W,10 minutes,100°C,NA
+"Use of microwave ablation for thermal
+treatment of solid tumors with different
+shapes and sizes—A computational approach -2020
+
+Antenna Type: Co-axial slot antenna",50 W,8 minutes,110°C,NA
+"Use of microwave ablation for thermal
+treatment of solid tumors with different
+shapes and sizes—A computational approach -2020
+
+Antenna Type: Co-axial slot antenna",25 W,12 minutes,95 °C,NA
+"Use of microwave ablation for thermal
+treatment of solid tumors with different
+shapes and sizes—A computational approach -2020
+
+Antenna Type: Co-axial slot antenna",50 W,10 minutes,105°C,NA
+"Use of microwave ablation for thermal
+treatment of solid tumors with different
+shapes and sizes—A computational approach -2020
+
+Antenna Type: Co-axial slot antenna",25 W,15 minutes,90°C,NA
+"Use of microwave ablation for thermal
+treatment of solid tumors with different
+shapes and sizes—A computational approach -2020
+
+Antenna Type: Co-axial slot antenna",50 W,12 minutes,100°C,NA
+"Toward Flexible Microwave Ablation Antennas
+With a Balun-Free Helical Dipole Design -2020
+
+Antenna Type: Balun-free helical dipole antenna ",40 W,5 minutes,60°C,"Length: 38 mm
+Width: 33 mm"
+"Optimal Antenna Slot Design for Hepatocellular Carcinoma Microwave Ablation -2020
+
+Antenna Type: Asymmetrical Co-axial slot antenna",50 W,5 minutes,50°C,1166 mm³
+"Dual-slot antennas for microwave tissue heating: Parametric design analysis and experimental validation-2011
+
+Antenna type: Dual slot antenna 
+Antenna dimanesions: G1=1mm, G2=3mm, L=7mm                                                                                     ",50W,10 minutes,NA,"20.1mm, 31.2mm,0.64"
+"Dual-slot antennas for microwave tissue heating: Parametric design analysis and experimental validation- 2011
+
+Antenna type: Dual slot antenna 
+Antenna dimanesions: G1=1mm, G2=5mm, L=8mm                                                                                     ",50W,10 minutes,NA,"18.9mm, 29.1mm, 0.65"
+"Dual-slot antennas for microwave tissue heating: Parametric design analysis and experimental validation- 2011
+
+Antenna type: Dual slot antenna 
+Antenna dimanesions: G1=1mm, G2=7mm, L=7mm                                                                                     ",50W,10 minutes,NA,"20.4mm, 25.3mm, 0.80"
+"Dual-slot antennas for microwave tissue heating: Parametric design analysis and experimental validation- 2011
+
+Antenna type: Dual slot antenna 
+Antenna dimanesions: G1=2mm, G2=3mm, L=7mm                                                                                     ",50W,10 minutes,NA,"20.8mm, 33.1mm, 0.63"
+"Dual-slot antennas for microwave tissue heating: Parametric design analysis and experimental validation - 2011
+
+Antenna type: Dual slot antenna 
+Antenna dimanesions: G1=1mm, G2=2mm, L=8mm                                                                                     ",50W,10 minutes,NA,"18.9mm, 31.7mm, 0.60"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies: Design, Performances, and Experimental Assessment- 2011",40W,3.33 minutes,NA,"Length: 32.307mm
+Diameter: 27.69mm"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies: Design, Performances, and Experimental Assessment- 2011",40W,6.67 minutes,NA,"Length: 41.53mm
+Diameter:35.38mm"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies: Design, Performances, and Experimental Assessment- 2011",40W,10 minutes,NA,"Length: 46.15mm
+Diameter: 41.53mm"
+"A Minimally Invasive Antenna for Microwave Ablation Therapies: Design, Performances, and Experimental Assessment- 2011",40W,13.33 minutes,NA,"Length: 51.53mm
+Diameter: 46.15mm"
+Heating characteristics of antenna arrays used in microwave ablation: A theoretical parametric study- 2013,100W,10 minutes,NA,"Width: 24mm
+Length: 18mm"
+Heating characteristics of antenna arrays used in microwave ablation: A theoretical parametric study- 2013,100W,11 minutes,NA,"Width: 54mm
+Length: 43mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,50W,0.33 minutes,76°C,"Width: 5mm
+Length:14.5mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,50W,0.67 minutes,90°C,"Width: 8mm
+Length:19mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,50W,1 minute,98°C,"Width: 10mm
+Length:20mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,50W,1.33 minutes,NA,"Width: 11mm
+Length:20mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,50W,1.67 minutes,NA,"Width: 12mm
+Length:20.5mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,50W,2 minutes,106°C,"Width: 13mm
+Length:21mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,50W,3 minutes,NA,"Width: 13mm
+Length:21mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,50W,4 minutes,NA,"Width: 13mm
+Length:21mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,50W,6 minutes,NA,"Width: 13mm
+Length:21mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,50W,8 minutes,NA,"Width: 13mm
+Length:21mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,50W,10 minutes,NA,"Width: 13mm
+Length:21mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,75W,0.33 minutes,NA,"Width: 7mm
+Length:20mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,75W,0.67 minutes,NA,"Width: 11mm
+Length:21mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,75W,1 minute,NA,"Width: 13mm
+Length:22mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,75W,1.33 minutes,NA,"Width: 15mm
+Length:22.5mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,75W,1.67 minutes,NA,"Width: 15mm
+Length: 22.5mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,75W,2 minutes,NA,"Width: 16mm
+Length:23mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,75W,3 minutes,NA,"Width: 17mm
+Length:23mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,75W,4 minutes,NA,"Width: 17mm
+Length:23mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,75W,6 minutes,NA,"Width: 17mm
+Length:23.5mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,75W,8 minutes,NA,"Width: 17mm
+Length:23.5mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,75W,10 minutes,NA,"Width: 17mm
+Length:23.5mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,100W,0.33 minutes,NA,"Width: 9mm
+Length: 21mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,100W,0.67 minutes,NA,"Width: 14mm
+Length:22.5mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,100W,1 minute,NA,"Width: 16mm
+Length:23mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,100W,1.33 minutes,NA,"Width:  17mm
+Length:23.5mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,100W,1.67 minutes,NA,"Width: 18mm
+Length:24mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,100W,2 minutes,NA,"Width: 19mm
+Length:24.5mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,100W,3 minutes,NA,"Width: 20mm
+Length:24.5mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,100W,4 minutes,NA,"Width: 20mm
+Length:24.5mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,100W,6 minutes,NA,"Width: 20mm
+Length:24.5mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,100W,8 minutes,NA,"Width: 20mm
+Length:24.5mm"
+Antenna design and tissue parameters considerations for an improved modelling of microwave ablation in the liver - 2013,100W,10 minutes,NA,"Width: 20mm
+Length:24.5mm"
+"Optimization of dual slot antenna using floating metallic sleeve
+for microwave ablation-2014",120W,3 minutes,NA,"Length: 42.26mm
+Width: 16.98mm"
+A Directional Interstitial Antenna for Microwave Tissue Ablation: Theoretical and Experimental Investigation- 2015,50W,10 minutes,NA,"Width: 30.5mm
+Diameter: 26mm"
+A Directional Interstitial Antenna for Microwave Tissue Ablation: Theoretical and Experimental Investigation- 2015,80W,10 minutes,NA,"Width: 46.5mm
+Diameter: 34.5mm"
+"Microwave ablation at 915 MHz vs 2.45 GHz: A theoretical
+and experimental investigation- 2015",30W,5 minutes,NA,"Diameter: 28.1mm
+Height: 58.8mm"
+"Microwave ablation at 915 MHz vs 2.45 GHz: A theoretical
+and experimental investigation- 2015",30W,10 minutes,NA,"Diameter: 36mm
+Height: 75.1mm"
+Analysis of minimally invasive directional antennas for microwave tissue ablation- 2016,77W,10 minutes,92.5°C,"Width: 45mm
+Height: 44.3mm"
+Experimental measurement of microwave ablation heating pattern and comparison to computer simulations- 2016,15W,6 minutes,100°C,"Width: 12.8mm
+Length: 21mm"
+"The impact of frequency on the performance of
+microwave ablation- 2016",25W,5 minutes,100°C,"Lateral diameter: 37mm
+Longitudinal Diameter: 45mm"
+A Hybrid Slot/Monopole Antenna With Directional Heating Patterns for Microwave Ablation- 2017,20W,5 minutes,NA,"Width: 16mm
+Length:16mm"
+A Minimally Invasive Coax-Fed Microwave Ablation Antenna With a Tapered Balun- 2017,20W,5 minutes,NA,Diameter: 24mm
+"Analysis of microwave ablation antenna optimization techniques- 2017
+
+Antenna type: Monopole
+Γ based optimisation",50W,5 minutes,NA,"Diameter: 25.6mm
+Length: 72mm"
+"Analysis of microwave ablation antenna optimization techniques- 2017
+
+Antenna type: Monopole
+SAR based optimisation",50W,5 minutes,NA,"Diameter: 25.2mm
+Length: 74.2mm"
+"Analysis of microwave ablation antenna optimisation techniques- 2017
+
+Antenna type: Monopole
+Temperature based optimisation",50W,5 minutes,NA,"Diameter: 25.6mm
+Length: 55mm"
+"Analysis of microwave ablation antenna optimization techniques- 2017
+
+Antenna type: Dual slot
+Γ based optimisation",50W,5 minutes,NA,"Diameter: 26mm
+Length: 50.4mm"
+"Analysis of microwave ablation antenna optimization techniques- 2017
+
+Antenna type: Dual slot
+SAR based optimisation",50W,5 minutes,NA,"Diameter: 25.4mm 
+Length: 73mm"
+"Analysis of microwave ablation antenna optimisation techniques- 2017
+
+Antenna type: Dual slot
+Temperature based optimisation",50W,5 minutes,NA,"Diameter: 25.2mm
+Length: 51mm"
+"Analysis of efficiency of different antennas for microwave ablation using simulation and experimental methods- 2018
+
+Antenna Type: Monopole",50W,10 minutes,195°C,"Diameter: 37.7mm
+Length: 55.1mm"
+"Analysis of efficiency of different antennas for microwave ablation using
+simulation and experimental methods- 2018
+
+Antenna Type: Single slot",50W,10 minutes,205°C,"Diameter: 41.4mm
+Length: 58.6mm"
+"Analysis of efficiency of different antennas for microwave ablation using
+simulation and experimental methods- 2018
+
+Antenna Type: Dual slot",50W,10 minutes,247°C,"Diameter: 40.1mm
+Length: 57.1mm"
+"Analysis of efficiency of different antennas for microwave ablation using
+simulation and experimental methods- 2018
+
+Antenna Type: Dual slot with sleeve",50W,10 minutes,307°C,"Diameter: 44.4mm
+Length: 49.3mm"
+Large and round ablation zones with microwave ablation: A preliminary study of an optimal aperiodic tri-slot coaxial antenna with the π-matching network section- 2019,45W,10 minutes,136°C,"Diameter: 51.5mm
+Length: 52.7mm"
+"Microwave antennas for thermal ablation of benign
+adrenal adenomas- 2019",30W,0.5 minute,NA,"Length: 4.01mm
+Width: 7mm"
+"Microwave antennas for thermal ablation of benign
+adrenal adenomas- 2019",30W,1 minute,NA,"Length: 12.60mm
+Width: 11.81mm"
+"Microwave antennas for thermal ablation of benign
+adrenal adenomas- 2019",30W,1.5 minute,NA,"Length: 15.92mm
+Width: 14.78mm"
+"Microwave antennas for thermal ablation of benign
+adrenal adenomas- 2019",40W,0.5 minute,85°C,"Length: 10.99mm
+Width: 9.52mm"
+"Microwave antennas for thermal ablation of benign
+adrenal adenomas- 2019",40W,1 minute,94°C,"Length: 16.72mm
+Width: 14.33mm"
+"Microwave antennas for thermal ablation of benign
+adrenal adenomas- 2019",40W,1.5 minutes,100°C,"Length: 20.04mm
+Width: 17.30mm"
+An Optimal Sliding Choke Antenna for Hepatic Microwave Ablation(2009)    Antenna type:Sliding Choke antenna          ,100 W,2 minutes,NA,radius=20mm
+Finite-Element Analysis and In Vitro Experiments of Placement Configurations Using Triple Antennas in Microwave Hepatic Ablation(2009)  Antenna type:Triple antenna   : FEM MODEL,50 W,1 minute,NA,"width = 35 mm, depth = 41 mm       "
+Finite-Element Analysis and In Vitro Experiments of Placement Configurations Using Triple Antennas in Microwave Hepatic Ablation(2009)    Antenna type:Triple antenna   : FEM MODEL MODEL,50 W,1 minute,NA,"width = 29 mm, depth = 31 mm        "
+Finite-Element Analysis and In Vitro Experiments of Placement Configurations Using Triple Antennas in Microwave Hepatic Ablation(2009) Antenna type:Triple antenna   : FEM MODEL,50 W,1 minute,NA,"width = 46 mm, depth = 81 mm	"

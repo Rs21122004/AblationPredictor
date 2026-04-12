@@ -1,0 +1,43 @@
+\chapter{Literature Review}
+
+\section{Microwave Ablation in Tumor Treatment}
+
+Microwave ablation employs electromagnetic waves (typically at 915\,MHz or 2.45\,GHz) to induce dielectric heating in biological tissue. Key treatment parameters include:
+
+\begin{itemize}
+    \item \textbf{Input Power} (W): Energy delivered to the tissue via the antenna.
+    \item \textbf{Treatment Duration} (minutes): Time of energy application.
+    \item \textbf{Antenna Design}: Determines the spatial distribution of the electromagnetic field.
+    \item \textbf{Frequency}: Operating frequency of the microwave system.
+\end{itemize}
+
+The resulting ablation zone is characterized by its \textbf{diameter} (or width), \textbf{length} (longitudinal extent), and overall \textbf{shape} (spherical vs.\ ellipsoidal), which is quantified by the \textbf{sphericity index} (diameter/length ratio).
+
+Several antenna designs have been developed for MWA, including monopole, dipole, dual-slot, triaxial, floating-sleeve, and helical dipole antennas. Each design produces distinct ablation zone geometries based on the specific absorption rate (SAR) pattern it creates.
+
+
+\section{Machine Learning in Medical Treatment Planning}
+
+Machine learning has been increasingly applied to medical treatment planning, including:
+
+\begin{itemize}
+    \item Radiation therapy dose prediction using deep learning.
+    \item Surgical outcome prediction using ensemble methods.
+    \item Drug response prediction using random forests and neural networks.
+    \item Temperature prediction during thermal ablation using deep learning (e.g., the Triple Coaxial-Half-Slot antenna study, 2021) \cite{triple_coaxial_2021}.
+\end{itemize}
+
+For structured tabular data with limited sample sizes, \textbf{tree-based ensemble methods} (Random Forest, Gradient Boosting) consistently outperform deep learning approaches. This is supported by extensive benchmarking studies and is particularly relevant to our dataset.
+
+
+\section{Existing Approaches and Research Gap}
+
+Most existing ablation zone prediction methods rely on:
+
+\begin{enumerate}
+    \item \textbf{Physics-based simulations} (FEM/FDTD): Accurate but computationally expensive (hours per case).
+    \item \textbf{Manufacturer lookup tables}: Quick but limited to specific antenna--power--time combinations.
+    \item \textbf{Empirical formulas}: Simple but poor generalization across antenna designs.
+\end{enumerate}
+
+\textbf{Research Gap:} There is no comprehensive ML-based predictive model that generalizes across multiple antenna types, power levels, and treatment durations using aggregated data from multiple published studies. This project addresses this gap.

@@ -1,0 +1,152 @@
+\documentclass[12pt,a4wide]{report}
+
+\usepackage{amsthm,amssymb,mathrsfs,setspace,pstcol}%amsmath, latexsym,footmisc
+\usepackage{amsmath}
+\usepackage{play}
+\usepackage{epsfig}
+\usepackage{graphicx}
+%\usepackage[grey,times]{quotchap}
+\usepackage[nottoc]{tocbibind}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+%
+
+\input xy
+\xyoption{all}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{notation}[theorem]{Notation}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\renewcommand{\baselinestretch}{1.5}
+\begin{document}
+
+%\pagenumbering{arabic} \setcounter{page}{1}
+
+% --------------- Title page -----------------------
+\begin{titlepage}
+\enlargethispage{2cm}
+
+\begin{center}
+
+\vspace*{-1cm}
+
+\textbf{\Large AI/ML-BASED PREDICTIVE MODEL FOR ABLATION ZONE ESTIMATION IN TUMOR TREATMENT}\\[10pt]
+
+\vspace*{2 cm}
+
+
+                         A Project Report Submitted \\
+                     in Partial Fulfilment of the Requirements  \\
+                     for the Degree of  \\
+                          \vspace{4.5mm}
+                   {\Large \bf Bachelor of Technology (Honours) } \\
+                   in \\
+                   {\large \bf Computer Science and Engineering (AI \& DS) } \\
+
+                      \vspace{9mm}
+                   {\em  by} \\ \vspace{2.5mm}
+             {\large \bf Rishi Sharma} \\
+{\large \bf (Roll No. 2023BCD0023)}\\[.35in]
+
+\vfill
+%\includegraphics[width=12cm, height=12cm]{iiserlogo}
+
+\begin{figure}[h]
+% \includegraphics[width=15mm,height=10mm]{time_arma_gs.jpg}
+  \begin{center}
+  \includegraphics[width=6cm, height=3cm]{logo2.jpg}
+  \end{center}
+\end{figure}
+\vspace*{0.2cm}
+{\em\large to }\\%[8pt]
+{\bf \mbox{DEPARTMENT OF {\bf COMPUTER SCIENCE AND ENGINEERING (AI \& DS) }}} \\%[4pt]
+{\bf \mbox{INDIAN INSTITUTE OF INFORMATION TECHNOLOGY}}\\%[4pt]
+{\bf KOTTAYAM-686635, INDIA}\\%[8pt]
+{\it April 2026}
+
+\end{center}
+
+\end{titlepage}
+
+\clearpage
+% --------------- Declaration  page -----------------------
+\pagenumbering{roman} \setcounter{page}{2}
+\begin{center}
+{\large{\bf{DECLARATION}}}
+\end{center}
+%\thispagestyle{empty}
+
+
+\noindent I, \textbf{Rishi Sharma} (\textbf{Roll No: 2023BCD0023}), hereby declare that, this report entitled
+\textbf{``AI/ML-Based Predictive Model for Ablation Zone Estimation in Tumor Treatment''} submitted to Indian
+Institute of Information Technology Kottayam towards partial
+requirement of {\bf Bachelor of Technology (Honours)} in \textbf{Computer Science and Engineering (AI \& DS)}
+is an original work carried out by me under the supervision of
+\textbf{Dr. Debarati Ganguly} and has not formed the basis for the award
+of any degree or diploma, in this or any other institution or
+university. I have sincerely tried to uphold the academic ethics
+and honesty. Whenever an external information or statement or
+result is used then, that have been duly acknowledged and cited.
+
+\vspace{4cm}
+
+\noindent Kottayam-686635 \hfill \textbf{Rishi Sharma}
+
+\noindent April  2026
+
+\clearpage
+
+
+% --------------- Certificate page -----------------------
+\pagenumbering{roman} \setcounter{page}{3}
+\begin{center}
+{\large{\bf{CERTIFICATE}}}
+\end{center}
+%\thispagestyle{empty}
+
+
+\noindent This is to certify that the work contained in this
+project report entitled \textbf{``AI/ML-Based Predictive Model for Ablation Zone Estimation in Tumor Treatment''}
+submitted by \textbf{Rishi Sharma} (\textbf{Roll No: 2023BCD0023}) to the Indian Institute of Information Technology Kottayam
+towards partial requirement of {\bf Bachelor of Technology (Honours)} in
+\textbf{Computer Science and Engineering (AI \& DS)} has been carried out by him under my
+supervision and that it has not been submitted elsewhere for the
+award of any degree.
+
+
+\vspace{4cm}
+
+\noindent Kottayam-686635  \hfill (Dr. Debarati Ganguly)
+
+\noindent April  2026 \hfill Project Supervisor
+
+\clearpage
+
+
+% --------------- Abstract page -----------------------
+\begin{center}
+{\Large{\bf{ABSTRACT}}}
+\end{center}
+
+
+Cancer remains one of the leading causes of morbidity globally, and minimally invasive thermal ablation techniques --- particularly Microwave Ablation (MWA) --- have emerged as promising alternatives to traditional surgery for the treatment of solid tumors. Accurate prediction of the ablation zone dimensions (diameter and length) is critical for effective treatment planning, yet current methods rely on either computationally expensive physics-based simulations or limited manufacturer lookup tables that fail to generalize across different antenna designs and operating conditions.
+
+This project presents an AI/ML-based predictive model for estimating ablation zone dimensions from treatment parameters. A comprehensive dataset of 326 samples was curated from 30+ published research papers (2004--2025), encompassing both experimental (ex vivo/in vivo) and simulation (FEM/computational) data across 15 antenna types. Extensive feature engineering was performed, including energy-based features, log transforms, and square-root transforms grounded in physical principles of heat transfer and thermal diffusion.
+
+Six machine learning regression models --- Ridge Regression, K-Nearest Neighbors, Support Vector Regression, Random Forest, Gradient Boosting, and Multi-Layer Perceptron --- were trained and evaluated using 10-fold cross-validation with GridSearchCV for hyperparameter optimization. Random Forest achieved the best performance for effective diameter prediction ($R^2 = 0.695$, MAE $= 6.02$\,mm), while Gradient Boosting performed best for length prediction ($R^2 = 0.512$, MAE $= 10.93$\,mm). Feature importance analysis revealed that energy-related features collectively account for 66.7\% of the prediction power, confirming that total energy delivered is the dominant factor in determining ablation zone size. An interactive prediction system was developed for real-time clinical decision support, enabling treatment planning in milliseconds compared to hours for conventional simulation approaches.
+
+\clearpage
+
+\end{document}

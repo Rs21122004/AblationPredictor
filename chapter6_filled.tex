@@ -1,0 +1,46 @@
+\chapter{Prediction Demo System}
+
+\section{System Design}
+
+An interactive command-line prediction system was built using the best trained models. The system accepts clinical parameters and outputs predicted ablation zone dimensions in real-time.
+
+\noindent\textbf{Input Parameters:}
+\begin{itemize}
+    \item Power (Watts)
+    \item Time (minutes)
+    \item Antenna category (from 15 types)
+\end{itemize}
+
+\noindent\textbf{Output Predictions:}
+\begin{itemize}
+    \item Effective diameter (mm)
+    \item Length (mm)
+    \item Estimated volume (mm$^3$) --- computed as an ellipsoid:
+    \begin{equation}
+        V = \frac{4}{3}\,\pi\,\frac{L}{2}\,\left(\frac{D}{2}\right)^2
+    \end{equation}
+    \item Sphericity index --- $D/L$ ratio
+\end{itemize}
+
+
+\section{Sample Predictions}
+
+\begin{table}[H]
+\centering
+\caption{Sample predictions from the demo system.}
+\label{tab:sample-predictions}
+\begin{tabular}{cccccc}
+\toprule
+\textbf{Power (W)} & \textbf{Time (min)} & \textbf{Antenna} & \textbf{Pred.\ Dia.\ (mm)} & \textbf{Pred.\ Len.\ (mm)} & \textbf{Est.\ Vol.\ (mm$^3$)} \\
+\midrule
+50  & 5  & Dual Slot & $\sim$27 & $\sim$38 & $\sim$14\,500 \\
+50  & 10 & Dual Slot & $\sim$33 & $\sim$47 & $\sim$26\,800 \\
+100 & 5  & Monopole  & $\sim$35 & $\sim$50 & $\sim$32\,000 \\
+100 & 10 & Monopole  & $\sim$42 & $\sim$58 & $\sim$53\,500 \\
+20  & 5  & Dipole    & $\sim$20 & $\sim$30 & $\sim$6\,300  \\
+80  & 10 & Triaxial  & $\sim$38 & $\sim$45 & $\sim$34\,000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These predictions align with published experimental data, demonstrating the model's practical utility for treatment planning.
