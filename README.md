@@ -4,7 +4,7 @@
 
 **Bachelor of Technology (Honours) Project** · IIIT Kottayam · April 2026  
 **Author:** Rishi Sharma (Roll No. 2023BCD0023)  
-**Supervisor:** Dr. Debarati Ganguly
+
 
 ---
 
