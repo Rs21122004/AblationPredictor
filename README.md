@@ -112,4 +112,3 @@ A **real-time prediction system** was built:
 
 ---
 
-## 📂 Project Structure
