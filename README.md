@@ -1,83 +1,115 @@
-# Tumor Ablation Zone Prediction System
+# Ablation Zone Prediction for Cancer Treatment using Machine Learning
 
-An end-to-end machine learning system and full-stack web application designed for predicting tumor ablation zone dimensions (effective diameter and length) based on experimental and simulated data. This project was developed as part of an Honours Project, providing both a robust predictive model and an intuitive dashboard interface for clinicians and researchers.
+## 🧠 Overview
+Accurate prediction of the ablation zone is critical in **microwave ablation (MWA)** for tumor treatment. Traditional approaches rely on computationally expensive simulations or limited lookup tables, making real-time clinical decision-making difficult.
 
-## Overview
+This project presents a **machine learning-based predictive system** that estimates ablation zone dimensions (diameter and length) directly from treatment parameters, enabling **instant predictions (milliseconds)** instead of hours required by physics-based simulations.
 
-The project is structured into three main components:
-1. **Machine Learning Pipeline**: Advanced data preprocessing, feature engineering, and model training scripts to process ablation data. Includes experimental and simulated datasets to construct predictive models for the expected ablation dimensions based on applied power (Watts) and time (Minutes).
-2. **Backend API (FastAPI)**: A robust REST API serving the pre-trained machine learning models. Built to deliver quick, scalable predictions on the fly.
-3. **Frontend Dashboard (React)**: An interactive, aesthetically pleasing frontend application where users can input ablation parameters and instantly view predicted outcomes in an intuitive dashboard.
+---
 
-## Key Features
+## 🎯 Problem Statement
+Predict the **ablation zone dimensions** (diameter, length, volume) from treatment parameters such as:
+- Input power
+- Treatment duration
+- Antenna type
 
-- **Predictive Modeling**: Provides accurate estimates for both `effective_diameter_mm` and `length_mm` of ablation zones.
-- **Model Evaluation & Results**: Comparative evaluation of multiple regression models to find the most accurate algorithm.
-- **Data Preprocessing**: Comprehensive handling of missing data, outlier removal (e.g., extreme power values), antenna label encoding, and scaling.
-- **Full-Stack Application**: A production-grade web application (React frontend + FastAPI backend) allowing hands-on interaction with the models.
-- **Academic Research Foundation**: Includes the complete LaTeX source for the Honours Project report, reflecting the rigorous methodology applied.
+👉 Without relying on:
+- FEM simulations  
+- Manufacturer-specific lookup tables  
 
-## Directory Structure
+---
 
-```
-├── ablation-prediction-app/
-│   ├── backend/             # FastAPI server and trained models endpoints
-│   └── frontend/            # React-based interactive web dashboard
-├── data_preprocessing.py    # Cleans and scales raw data, handles train/test splits
-├── eda_analysis.py          # Exploratory Data Analysis & visual generation
-├── feature_engineering.py   # Feature extraction and transformation
-├── model_training.py        # Trains the ML models based on the processed datasets
-├── model_results.py         # Evaluates model performance and metrics
-├── predict_demo.py          # Command-line demonstration of predictions
-├── report.tex (and others)  # LaTeX files for the Honours Project Report
-└── README.md                # This documentation file
-```
+## 📊 Dataset
+- 📄 **326 samples** curated from **30+ research papers (2004–2025)** :contentReference[oaicite:1]{index=1}  
+- 🔬 Includes:
+  - Experimental (ex vivo / in vivo)
+  - Simulated (FEM / computational)
+- ⚙️ Covers:
+  - **15+ antenna types**
+  - Wide range of power & time values
 
-## Getting Started
+### Key Challenges
+- Unstructured data → extracted using **regex parsing**
+- Missing values (temperature, etc.)
+- Heterogeneous sources across studies
 
-### Prerequisites
-- Python 3.8+
-- Node.js (for the frontend app)
+---
 
-### Running the Machine Learning Pipeline
+## ⚙️ Feature Engineering
+Domain-driven features based on **thermal physics principles**:
 
-If you want to re-train the models or run the data scripts:
-```bash
-# 1. Feature Engineering
-python feature_engineering.py
+- `energy_joules = power × time × 60` (most important feature)
+- `power_time_product`
+- Log transforms (`log_power`, `log_energy`)
+- `sqrt_time` (models thermal diffusion)
+- Encoded antenna type
+- Simulation flag (`is_simulated`)
 
-# 2. Preprocess the Data
-python data_preprocessing.py
+👉 Energy-related features contributed **~66.7% of model importance** :contentReference[oaicite:2]{index=2}  
 
-# 3. Train the Models
-python model_training.py
+---
 
-# 4. View Model Results
-python model_results.py
-```
+## 🧠 Machine Learning Models
+Trained and benchmarked **6 regression models**:
 
-### Running the Web Application
+- Ridge Regression
+- K-Nearest Neighbors (KNN)
+- Support Vector Regression (SVR)
+- Random Forest ⭐
+- Gradient Boosting ⭐
+- Multi-Layer Perceptron (MLP)
 
-**1. Start the Backend API**
-```bash
-cd ablation-prediction-app/backend
-pip install -r requirements.txt
-uvicorn main:app --reload
-```
+### Training Strategy
+- ✅ 10-fold cross-validation  
+- ✅ GridSearchCV for hyperparameter tuning  
+- ✅ Separate models for:
+  - Diameter prediction
+  - Length prediction  
 
-**2. Start the Frontend Dashboard**
-```bash
-cd ablation-prediction-app/frontend
-npm install
-npm run dev
-```
+---
 
-## Data Assets
-The project utilizes historical datasets containing applied settings, antenna types, and resulting ablation dimensions:
-- `Ablation Zone Model - Experimental data.csv`
-- `Ablation Zone Model2 - Simulated data.csv`
+## 📈 Results
 
-*Note: Cleaned and engineered `.csv` and `.pkl` outputs are generated automatically by running the processing scripts.*
+### Diameter Prediction
+- **Best Model:** Random Forest  
+- **R² Score:** 0.695  
+- **MAE:** 6.02 mm  
 
-## Academic Context
-This repository contains the codebase and final report contents for an Honours Review submission. The accompanying presentation, documentation, and thesis files detail the rationale, theoretical background, and systematic results obtained throughout the project's duration.
+### Length Prediction
+- **Best Model:** Gradient Boosting  
+- **R² Score:** 0.512  
+- **MAE:** 10.93 mm  
+
+👉 Achieves **clinically meaningful accuracy** :contentReference[oaicite:3]{index=3}  
+
+---
+
+## 🔍 Key Insights
+
+- ⚡ **Energy (power × time)** is the dominant predictor  
+- 🌳 Tree-based models outperform neural networks on tabular data  
+- 📉 MLP overfits due to small dataset size  
+- 🔬 Antenna type significantly impacts ablation geometry  
+
+---
+
+## 🛠️ System Design
+
+A **real-time prediction system** was built:
+
+### Input:
+- Power (W)
+- Time (minutes)
+- Antenna type
+
+### Output:
+- Predicted diameter (mm)
+- Predicted length (mm)
+- Estimated volume
+- Sphericity index
+
+👉 Predictions generated in **milliseconds vs hours for simulations** :contentReference[oaicite:4]{index=4}  
+
+---
+
+## 📂 Project Structure
