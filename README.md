@@ -12,8 +12,9 @@
   <img src="https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
   <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn"/>
-  <img src="https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
 </p>
 
 <p align="center">
@@ -41,7 +42,7 @@
 - [Exploratory Data Analysis](#-exploratory-data-analysis)
 - [Feature Engineering](#-feature-engineering)
 - [Model Training & Results](#-model-training--results)
-- [Clinical Dashboard](#-clinical-dashboard)
+- [Production-Ready Full-Stack Architecture](#-production-ready-full-stack-architecture)
 - [Project Structure](#-project-structure)
 - [Getting Started](#-getting-started)
 - [Sample Predictions](#-sample-predictions)
@@ -85,10 +86,11 @@ This project develops an **end-to-end machine learning system** and **full-stack
 | 🤖 **6 ML Models Compared** | Ridge, KNN, SVR, Random Forest, Gradient Boosting, MLP |
 | 📊 **Comprehensive EDA** | 12+ publication-quality plots with detailed statistical analysis |
 | 🔧 **Advanced Feature Engineering** | Energy-based, log-transformed, and interaction features |
-| 🏥 **Clinical Dashboard** | Real-time predictions via React + FastAPI web application |
+| 🏥 **Full-Stack Application** | React SPA cleanly decoupled from an asynchronous FastAPI backend |
+| 🛡️ **Production SDE Patterns** | Dockerized deployment, Prometheus metrics, Redis-backed rate limiting |
 | 📈 **GridSearchCV Tuning** | 10-fold cross-validation with exhaustive hyperparameter search |
 | 🧪 **Dual Data Sources** | 222 experimental + 104 simulated samples from 30+ papers |
-| 📄 **Full Academic Report** | Complete LaTeX thesis with 7 chapters and bibliography |
+| 📄 **Full Deployable System** | Scalable database abstraction (`asyncpg` + SQLAlchemy) and Pydantic validation |
 | 🔍 **Algorithmic Transparency** | Dashboard exposes model metadata and confidence metrics |
 
 ---
@@ -347,36 +349,38 @@ Six regression models were trained with **10-fold cross-validation** and **GridS
 
 ---
 
-## 🖥 Clinical Dashboard
+## 🖥 Production-Ready Full-Stack Architecture
 
-A production-grade full-stack web application translates the trained models into a practical clinical tool.
+A production-grade web service designed to translate trained ML models into a practical clinical tool, built to rigorous Software Development Engineering (SDE) industry standards.
 
-### Tech Stack
+### Tech Stack & Engineering Features
 
-| Layer | Technology | Purpose |
+| Category | Technology | Architectural Choice / Purpose |
 |:---|:---|:---|
-| **Frontend** | React 19 + Vite 8 | Interactive SPA with dark-mode UI |
-| **Backend** | FastAPI + Uvicorn | REST API serving serialized ML models |
-| **Validation** | Pydantic | Strict input schema enforcement |
-| **ML Runtime** | scikit-learn 1.8 + NumPy + Pandas | Pre-loaded models for instant inference |
+| **Frontend** | React 19 + Vite 8 | Interactive SPA with responsive, dark-mode UI for clinical environments |
+| **Backend API** | FastAPI + Uvicorn | High-performance async REST API, heavily typed with Pydantic schemas |
+| **Database & Cache**| PostgreSQL + Redis | Persistent relational storage via `asyncpg`/SQLAlchemy and Redis caching |
+| **Deployment** | Docker & Docker Compose | Containerized multi-service architecture for flawless cross-platform deployment |
+| **Resilience & Security**| SlowAPI / CORS | Multi-layered defense: strict CORS origin policies and IP-based rate-limiting |
+| **Observability**| Prometheus Middlewares | Custom middlewares capturing system health, request traces, and latency metrics |
 
-### Dashboard Features
+### System Highlights
 
-- **🎛 Interactive Input Form** — Power (W), Duration (min), and Antenna Type selection
-- **📊 Real-Time KPI Cards** — Predicted diameter, length, volume, and sphericity
-- **🔍 Algorithmic Transparency** — Exposes model name, type, and MAE per prediction
-- **🟢 Health Monitoring** — Live API status indicator
-- **🌙 Dark Mode UI** — Minimizes visual fatigue in clinical environments
+- **🚥 Asynchronous Processing** — Fully non-blocking event loop on the backend using `asyncpg` and asynchronous drivers to handle multi-client inference without freezing.
+- **🔴 System Monitoring** — Real-time metrics streaming at `/metrics` mapped to prometheus, logging execution time and traffic loads for scaling.
+- **🔐 Robust Validation & Security** — Pydantic enforces strict input validation boundaries. Rate limiting (SlowAPI) prevents API abuse.
+- **🐳 Container Orchestration** — A zero-config deployment using Docker Compose wrapping backend, frontend, database, and Redis cache tightly together.
+- **🎛 Interactive UI/UX** — Modern React components gracefully handle complex clinical inputs, API fetching errors, and surface analytical data in clean KPI cards.
 
-### API Endpoints
+### Core API Endpoints
 
 | Method | Endpoint | Description |
 |:---|:---|:---|
-| `GET` | `/` | API root with version info |
-| `GET` | `/api/health` | Health check and model status |
-| `POST` | `/api/predict` | Generate ablation zone prediction |
-| `GET` | `/docs` | Interactive Swagger documentation |
-| `GET` | `/redoc` | ReDoc API documentation |
+| `GET` | `/` | API root indicating version and deployment status |
+| `GET` | `/api/health` | Deep health check probing DB connection latency and model RAM status |
+| `POST` | `/api/predict` | Main ML inference engine executing sub-millisecond regression predictions |
+| `GET` | `/metrics` | Prometheus metrics scraping endpoint for infrastructure observability |
+| `GET` | `/docs` | Pre-generated Swagger OpenAPI specifications for API consumers |
 
 ---
 
@@ -557,11 +561,11 @@ The compiled report is available as [`Honours_Project_Report.pdf`](Honours_Proje
 ## 🛠 Tech Stack Summary
 
 ```
-ML Pipeline:         Python · scikit-learn · Pandas · NumPy · Matplotlib · Seaborn
-Backend API:         FastAPI · Uvicorn · Pydantic · python-dotenv
-Frontend:            React 19 · Vite 8 · Vanilla CSS (dark theme)
-Model Serialization: pickle (.pkl)
-Cross-Validation:    10-fold · GridSearchCV
+Infrastructure:      Docker · Docker Compose · Redis · PostgreSQL
+Backend Engine:      FastAPI · Uvicorn · asyncpg · SQLAlchemy · Alembic
+ML Pipeline:         Python · scikit-learn · Pandas · NumPy · GridSearchCV
+Observability:       Prometheus · Request Middlewares · SlowAPI (Rate Limiting)
+Frontend UI:         React 19 · Vite 8 · Vanilla CSS (dark theme)
 Report:              LaTeX · BibTeX
 ```
 

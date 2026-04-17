@@ -1,33 +1,41 @@
-\chapter{Prediction Demo System}
+\chapter{Clinical Decision Support Dashboard}
 
-\section{System Design}
+\section{System Architecture}
 
-An interactive command-line prediction system was built using the best trained models. The system accepts clinical parameters and outputs predicted ablation zone dimensions in real-time.
+To translate the trained machine learning models into a practical tool for clinical application, a production-grade full-stack web application was developed. The architecture operates entirely as an interactive clinical decision support dashboard, composed of a decoupled backend API and a dynamic frontend user interface.
 
-\noindent\textbf{Input Parameters:}
+\subsection{Backend Inference Engine (FastAPI)}
+The backend is authored in Python utilizing the FastAPI framework to expose the serialized machine learning models via RESTful endpoints. Its core responsibilities include:
 \begin{itemize}
-    \item Power (Watts)
-    \item Time (minutes)
-    \item Antenna category (from 15 types)
+    \item \textbf{Model Instantiation:} Pre-loading the best-performing serialized \texttt{.pkl} algorithms (e.g., Random Forest for Diameter, Gradient Boosting for Length) into server memory upon startup to eliminate disk I/O bottlenecks during live inference.
+    \item \textbf{Data Validation:} Enforcing strict schema evaluation of incoming clinical parameters (Power, Time, Antenna Type) using Pydantic, ensuring that out-of-bound or corrupted inputs are rejected before reaching the predictive algorithms.
+    \item \textbf{Ensemble Prediction:} Routing validated parameters through the appropriate feature engineering pathways and returning both the predicted ablation zone dimensions (effective diameter and length) alongside derived metrics such as estimated volume and sphericity index.
 \end{itemize}
 
-\noindent\textbf{Output Predictions:}
+\subsection{Frontend User Interface (React)}
+The user interface is engineered as a modern Single Page Application (SPA) using React and Vite. It is designed specifically for clinical environments with a dark-mode aesthetic to minimize visual fatigue. Key features of the frontend include:
 \begin{itemize}
-    \item Effective diameter (mm)
-    \item Length (mm)
-    \item Estimated volume (mm$^3$) --- computed as an ellipsoid:
-    \begin{equation}
-        V = \frac{4}{3}\,\pi\,\frac{L}{2}\,\left(\frac{D}{2}\right)^2
-    \end{equation}
-    \item Sphericity index --- $D/L$ ratio
+    \item \textbf{Interactive Input Form:} Clinicians can rapidly input power settings, duration, and select specific antenna types from a comprehensive drop-down menu mapped exactly to the trained categorical variables.
+    \item \textbf{Real-Time KPI Dashboard:} As processing concludes, the system populates massive Key Performance Indicator (KPI) cards displaying the projected ablation focus diameter, total length, estimated ablation volume, and sphericity. 
+    \item \textbf{Algorithmic Transparency:} The dashboard deliberately exposes the underlying algorithm metadata utilized for the prediction (including the specific model name and its cross-validated median absolute error) to build clinician trust in the AI-generated results.
 \end{itemize}
 
+\section{Dashboard Demonstration}
 
-\section{Sample Predictions}
+The completed clinical dashboard aligns tightly with published experimental ablation data, demonstrating the pipeline's utility from data ingestion through to a deployed medical software application.
+
+\begin{figure}[H]
+    \centering
+    % TODO: Take a screenshot of the React Dashboard running in your browser and save it to the 'plots' folder as 'dashboard_screenshot.png'
+    % \includegraphics[width=0.9\textwidth]{plots/dashboard_screenshot.png}
+    \vspace{2cm} % Space placeholder for screenshot
+    \caption{Interactive full-stack clinical dashboard predicting the ablation zone iteratively based on clinician input.}
+    \label{fig:dashboard}
+\end{figure}
 
 \begin{table}[H]
 \centering
-\caption{Sample predictions from the demo system.}
+\caption{Sample predictions validated through the web dashboard.}
 \label{tab:sample-predictions}
 \begin{tabular}{cccccc}
 \toprule
@@ -42,5 +50,3 @@ An interactive command-line prediction system was built using the best trained m
 \bottomrule
 \end{tabular}
 \end{table}
-
-These predictions align with published experimental data, demonstrating the model's practical utility for treatment planning.
