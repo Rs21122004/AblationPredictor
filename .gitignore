@@ -49,3 +49,19 @@ coverage/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# VS Code local workspace
+HonoursReview2.code-workspace
+.vscode/
+
+# Local Research Reference Materials
+Research Papers Non Invasive/
+
+# Large Serialized Model Files (over 10MB)
+advanced_training_results.pkl
+
+# ML training artifacts & virtual envs
+**/catboost_info/
+.clean_venv/
+.venv/
+**/__pycache__/

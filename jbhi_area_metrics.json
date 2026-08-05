@@ -1,0 +1,63 @@
+{
+  "Ridge Regression": {
+    "cv_r2": 0.4788,
+    "test_r2": 0.0362,
+    "test_mae": 405.2,
+    "test_rmse": 495.7,
+    "test_mape": 98.0
+  },
+  "KNN": {
+    "cv_r2": 0.5722,
+    "test_r2": 0.3162,
+    "test_mae": 285.5,
+    "test_rmse": 417.6,
+    "test_mape": 58.5
+  },
+  "SVR": {
+    "cv_r2": 0.5333,
+    "test_r2": 0.3319,
+    "test_mae": 316.7,
+    "test_rmse": 412.7,
+    "test_mape": 68.4
+  },
+  "Random Forest": {
+    "cv_r2": 0.6026,
+    "test_r2": 0.3629,
+    "test_mae": 281.6,
+    "test_rmse": 403.0,
+    "test_mape": 53.0
+  },
+  "Gradient Boosting": {
+    "cv_r2": 0.6168,
+    "test_r2": 0.3898,
+    "test_mae": 274.3,
+    "test_rmse": 394.5,
+    "test_mape": 57.0
+  },
+  "MLP Neural Network": {
+    "cv_r2": 0.4526,
+    "test_r2": -0.4609,
+    "test_mae": 465.4,
+    "test_rmse": 610.3,
+    "test_mape": 63.1
+  },
+  "_feature_importance_rf": {
+    "power_watts": 0.032,
+    "time_minutes": 0.0223,
+    "energy_joules": 0.25,
+    "power_time_product": 0.213,
+    "log_power": 0.0282,
+    "log_time": 0.0209,
+    "log_energy": 0.2734,
+    "sqrt_time": 0.0272,
+    "is_simulated": 0.0753,
+    "antenna_encoded": 0.0577
+  },
+  "_dataset": {
+    "n_total": 191,
+    "n_train": 152,
+    "n_test": 39,
+    "area_mean": 850.7,
+    "area_std": 646.7
+  }
+}
