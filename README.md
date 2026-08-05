@@ -389,55 +389,45 @@ A production-grade web service designed to translate trained ML models into a pr
 ```
 HonoursReview2/
 │
-├── 📊 ML Pipeline
+├── 📂 ml_pipeline/                  # Machine Learning Pipeline
 │   ├── feature_engineering.py       # Regex parsing & feature extraction
 │   ├── data_preprocessing.py        # Cleaning, scaling, train/test split
 │   ├── eda_analysis.py              # EDA & publication-quality plots
 │   ├── model_training.py            # 6 models × GridSearchCV × 10-fold CV
 │   ├── model_results.py             # Evaluation metrics & visualizations
-│   └── predict_demo.py              # CLI prediction demonstration
+│   └── advanced_model_experiment.py # Experimental modeling scripts
 │
-├── 📈 Generated Outputs
-│   ├── plots/                       # 12 publication-quality analysis plots
-│   ├── preprocessed_data.pkl        # Processed data + scalers + encoders
-│   └── training_results.pkl         # All trained models + metrics
+├── 📂 backend/                      # FastAPI REST API (Backend)
+│   ├── main.py                      # App entry, CORS, lifespan
+│   ├── routes/                      # Health check & prediction endpoints
+│   ├── services/                    # Model loader & inference engine
+│   ├── schemas/                     # Pydantic request/response schemas
+│   ├── models/                      # Serialized .pkl model files
+│   └── requirements.txt             # Python dependencies
 │
-├── 🌐 Web Application
-│   └── ablation-prediction-app/
-│       ├── backend/                 # FastAPI REST API
-│       │   ├── main.py              # App entry, CORS, lifespan
-│       │   ├── routes/              # Health check & prediction endpoints
-│       │   ├── services/            # Model loader & inference engine
-│       │   ├── schemas/             # Pydantic request/response schemas
-│       │   ├── models/              # Serialized .pkl model files
-│       │   └── requirements.txt     # Python dependencies
-│       └── frontend/                # React + Vite SPA
-│           ├── src/
-│           │   ├── App.jsx          # Main dashboard layout
-│           │   ├── components/      # PredictionForm, Results, ModelInfo
-│           │   ├── services/        # API client
-│           │   └── utils/           # Formatters & helpers
-│           └── package.json         # Node.js dependencies
+├── 📂 frontend/                     # React + Vite SPA (Frontend)
+│   ├── src/
+│   │   ├── App.jsx                  # Main dashboard layout
+│   │   ├── components/              # PredictionForm, Results, ModelInfo
+│   │   ├── services/                # API client
+│   │   └── utils/                   # Formatters & helpers
+│   └── package.json                 # Node.js dependencies
 │
-├── 📝 Academic Report (LaTeX)
-│   ├── report.tex                   # Main document
-│   ├── chapter1_filled.tex          # Introduction
-│   ├── chapter2_filled.tex          # Literature Review
-│   ├── chapter3_filled.tex          # Dataset & EDA
-│   ├── chapter4_filled.tex          # Methodology
-│   ├── chapter5_filled.tex          # Results & Discussion
-│   ├── chapter6_filled.tex          # Clinical Dashboard
-│   ├── chapter7_filled.tex          # Conclusion & Future Work
-│   └── references.bib              # Bibliography
+├── 📈 plots/                        # 12+ publication-quality analysis plots
 │
-├── 📄 Data Files
+├── 📄 Data & Pretrained Models
 │   ├── Ablation Zone Model - Experimental data.csv
 │   ├── Ablation Zone Model2 - Simulated data.csv
 │   ├── combined_data_engineered.csv
 │   ├── combined_data_ml_ready.csv
 │   ├── experimental_data_engineered.csv
-│   └── simulated_data_engineered.csv
+│   ├── simulated_data_engineered.csv
+│   ├── preprocessed_data.pkl        # Processed data + scalers + encoders
+│   └── training_results.pkl         # All trained models + metrics
 │
+├── jbhi_area_pipeline.py            # JBHI Paper area target pipeline (Extension)
+├── predict_demo.py                  # CLI prediction demonstration
+├── docker-compose.yml               # Production multi-container config
 └── README.md                        # ← You are here
 ```
 
@@ -449,6 +439,7 @@ HonoursReview2/
 
 - **Python 3.8+** with pip
 - **Node.js 18+** with npm
+- **Docker & Docker Compose** (Optional, for containerized run)
 - Git
 
 ### 1️⃣ Clone the Repository
@@ -460,47 +451,98 @@ cd AblationPredictor
 
 ### 2️⃣ Run the ML Pipeline (Optional — models are pre-trained)
 
-```bash
-# Install ML dependencies
-pip install pandas numpy scikit-learn matplotlib seaborn
+The ML pipeline scripts are located inside the `ml_pipeline` directory and reference their local directory for data read/writes. 
 
-# Step 1: Feature Engineering
-python feature_engineering.py
+If you wish to re-train the models:
 
-# Step 2: Data Preprocessing
-python data_preprocessing.py
+1. **Copy the raw datasets** into the `ml_pipeline` directory:
+   ```bash
+   cp "Ablation Zone Model - Experimental data.csv" ml_pipeline/
+   cp "Ablation Zone Model2 - Simulated data.csv" ml_pipeline/
+   ```
 
-# Step 3: Train All Models (takes ~2-5 minutes)
-python model_training.py
+2. **Install ML dependencies**:
+   ```bash
+   pip install pandas numpy scikit-learn matplotlib seaborn
+   ```
 
-# Step 4: Generate Result Plots
-python model_results.py
+3. **Run the scripts** (either from inside the `ml_pipeline/` directory or using the paths below):
+   ```bash
+   # Step 1: Feature Engineering (generates clean datasets in ml_pipeline/)
+   python ml_pipeline/feature_engineering.py
 
-# Step 5: Quick CLI Prediction Demo
-python predict_demo.py
-```
+   # Step 2: Data Preprocessing (generates preprocessed_data.pkl in ml_pipeline/)
+   python ml_pipeline/data_preprocessing.py
+
+   # Step 3: Train All Models (generates training_results.pkl in ml_pipeline/)
+   python ml_pipeline/model_training.py
+
+   # Step 4: Generate Result Plots (saves plots to ml_pipeline/plots/)
+   python ml_pipeline/model_results.py
+   ```
+
+4. **Deploy new models** (Optional):
+   To use your newly trained models in the backend API or CLI demo, copy the generated `.pkl` files from `ml_pipeline/` to their respective targets:
+   ```bash
+   # For CLI Demo (predict_demo.py) in the root:
+   cp ml_pipeline/*.pkl .
+
+   # For the Web API:
+   cp ml_pipeline/*.pkl backend/models/
+   ```
 
 ### 3️⃣ Launch the Web Application
+
+You can launch the full application either using **Docker Compose** (recommended) or **locally**.
+
+#### Option A: Using Docker Compose (Zero Configuration)
+
+Build and start all services (Backend, Frontend, PostgreSQL database, and Redis cache):
+
+```bash
+docker-compose up --build
+```
+
+* **Frontend Dashboard**: `http://localhost:5173`
+* **FastAPI Backend (Swagger Docs)**: `http://localhost:8000/docs`
+
+#### Option B: Local Setup
 
 **Start the Backend API:**
 
 ```bash
-cd ablation-prediction-app/backend
+cd backend
+# (Optional) Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
+
 pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 ```
 
-The API will be available at `http://localhost:8000` with Swagger docs at `/docs`.
+The API will be available at `http://localhost:8000` with Swagger docs at `http://localhost:8000/docs`.
 
 **Start the Frontend Dashboard:**
 
 ```bash
-cd ablation-prediction-app/frontend
+cd ../frontend
 npm install
 npm run dev
 ```
 
 The dashboard will be available at `http://localhost:5173`.
+
+---
+
+## 🔬 Publication Extension: IEEE JBHI Area Predictor
+
+In addition to predicting raw dimensions (diameter and length), this repository contains an extended ML pipeline targeting the **IEEE Journal of Biomedical and Health Informatics (JBHI)**.
+
+* **Target Paper**: `Machine Learning-Based Prediction of Ablation Zone Area for Microwave Ablation Treatment Planning: A Multi-Source Data Approach`
+* **Objective**: Predict the overall cross-sectional ablation zone area using an ellipsoidal approximation:
+  $$\text{Area} = \frac{\pi \times \text{Effective Diameter} \times \text{Length}}{4}$$
+* **Extension Pipeline**: [jbhi_area_pipeline.py](file:///Users/rs/Desktop/HonoursReview2/jbhi_area_pipeline.py)
+* **Results**: Trains 6 models on a subset of 191 fully-resolved samples (containing both target values). The best-performing model is **Gradient Boosting** ($R^2 = 0.3898$). The full model results are cached in [jbhi_area_metrics.json](file:///Users/rs/Desktop/HonoursReview2/jbhi_area_metrics.json).
 
 ---
 
@@ -542,19 +584,10 @@ The dashboard will be available at `http://localhost:5173`.
 
 ## 📚 Academic Context
 
-This repository contains the complete codebase and LaTeX source for an **Honours Project submission** at IIIT Kottayam. The thesis covers:
+This repository contains the complete codebase and compiled deliverables for an **Honours Project submission** at IIIT Kottayam.
 
-| Chapter | Topic |
-|:---|:---|
-| Chapter 1 | Introduction & Problem Statement |
-| Chapter 2 | Literature Review — MWA & ML in Medicine |
-| Chapter 3 | Dataset Description & Exploratory Data Analysis |
-| Chapter 4 | Methodology — Preprocessing, Models, Metrics |
-| Chapter 5 | Results & Discussion — Model Comparison |
-| Chapter 6 | Clinical Decision Support Dashboard |
-| Chapter 7 | Conclusion & Future Work |
-
-The compiled report is available as [`Honours_Project_Report.pdf`](Honours_Project_Report.pdf).
+The compiled report covers chapters on the MWA literature, dataset analysis, ML methodologies, and full-stack implementation details. The final compiled document is available at:
+👉 [Honours_Project_Report.pdf](file:///Users/rs/Desktop/HonoursReview2/Honours_Project_Report.pdf)
 
 ---
 
@@ -566,7 +599,7 @@ Backend Engine:      FastAPI · Uvicorn · asyncpg · SQLAlchemy · Alembic
 ML Pipeline:         Python · scikit-learn · Pandas · NumPy · GridSearchCV
 Observability:       Prometheus · Request Middlewares · SlowAPI (Rate Limiting)
 Frontend UI:         React 19 · Vite 8 · Vanilla CSS (dark theme)
-Report:              LaTeX · BibTeX
+Compiled Report:     PDF Thesis Report
 ```
 
 ---
